@@ -1,0 +1,11 @@
+render函数中的createElement方法有三个参数。第一个参数为外层标签名，第二个为外层标签的属性对象，第三个为外层标签中的内容。
+例如：
+    render(createElement) {
+      return createElement(
+        'div', {
+          class: this.groupClass
+        }, '内容',
+      )
+    }
+渲染结果为：
+<div class="this.groupClass里面的值">内容</div>
