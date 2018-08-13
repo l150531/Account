@@ -13,6 +13,10 @@
         <input type="text" v-model="message"><br>
         {{ message }}<br>
         <child></child>
+        
+        <router-link to='/home'></router-link>
+        <router-link to='/set'></router-link>
+        <router-view></router-view>
     </div>
 </body>
 <!-- <script src="f:/Git/Vue/vue/dist/vue.min.js"></script>  -->
@@ -20,8 +24,32 @@
 <script src="vue-router.js"></script>
 <script src="vue-resource.js"></script>
 <script>
+//配置vue路由    
+const routes = [
+  { path:'/home', component: Home },
+  { path:'/set', component: set }
+]
+//定义路由
+const routers = new VueRouter({
+      routes, // routes: routes 的简写
+})
 // 定义一个名为 button-counter 的新组件
-
+Vue.component('Home', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '#Home'
+})
+Vue.component('Set', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '#Set'
+})
 Vue.component('child', {
   data: function () {
     return {
@@ -33,6 +61,7 @@ Vue.component('child', {
 
 new Vue({
     el:"#app",
+    routers,
     data:{
         message:"Hi!"
     }
