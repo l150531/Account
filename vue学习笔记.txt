@@ -9,3 +9,40 @@ render函数中的createElement方法有三个参数。第一个参数为外层�
     }
 渲染结果为：
 <div class="this.groupClass里面的值">内容</div>
+
+
+Vue工程化步骤：
+1、webpack是前端模块化和打包工具，webpack.config.js是它的核心文件。
+2、安装完webpack文件。在它里面的index.html文件中使用<script></script>标签包裹住编译后生成的文件
+build.js文件。
+3、main.js文件是整个项目的入口文件，
+4、在package.json文件中加载项目中用到各种组件。
+5、app.vue文件是组件的入口文件。
+
+1、创建一个空的文件夹用来保存项目
+2、安装node
+3、运行cnpm init，生成package.json文件。
+4、修改package.json文件中“Main”为自己项目主main.js文件的名字、
+5、在“script”中添加如下：
+    “dev”:"webpack-dev-server --open --hot --port 8888"
+6、安装webpack、vue-loader、css-loader问件
+7、cnpm i -D webpack webpack-dev-server
+8、cnpm i -D vue-loader vue-html-loader vue-style-loader
+9、cnpm i -D babel-loader babel-core babel-preset-env
+
+
+10、配置webpack.config.js文件
+    在webpack.config.js文件配置项目的入口文件main.json文件。
+    编译后的输出文件：output：build.json文件。
+    需要加载的各个模块：module
+11、编写main.js文件
+12、编写APP.vue和USER.vue文件
+13、编写babelrc
+14、编写index.html引用build.js文件 
+此时webpack将js/vue打包到build.js。先执行Npm install或者Cnpm install
+
+
+
+3、.Vue文件是在Vue工程中的页面的显示文件。一个.Vue文件就是一个组件。
+4、.Vue文件格式浏览器不认识，需要在webpack中加载vue-loader，用它来对.vue文件进行解析。
+5、
