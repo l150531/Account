@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+  <!--头部缺少相应的文件，最少要支持utf-8编码-->
 <title>通用票据打印</title>
 </head>
 <body>
@@ -10,46 +11,39 @@
         第四个组件用来填写收票人的全称，账号和银行；    
         第三和第四个组件的数据需要保存下来，在第一和第二组件可以选择
         -->
+       <!--
         <input type="text" v-model="message"><br>
         {{ message }}<br>
         <child></child>
-        
-        <router-link to="/home"></router-link>
-        <router-link to="/set"></router-link>
+      -->
+        <router-link to="/home">Home页</router-link>
+        <router-link to="/set">设置页</router-link>
         <router-view></router-view>
-    </div>
+      </div>
 </body>
 <!-- <script src="f:/Git/Vue/vue/dist/vue.min.js"></script>  -->
 <script src="vue.min.js"></script>
 <script src="vue-router.js"></script>
 <script src="vue-resource.js"></script>
 <script>
+//路由可以显示，但是点击链接没反应
 //配置vue路由    
 const routes = [
   { path:'/home', component: Home },
-  { path:'/set', component: set }
+  { path:'/set', component: Set }
 ]
 //定义路由
-const routers = new VueRouter({
-      routes, // routes: routes 的简写
-})
+const router = new VueRouter(
+      routes // routes: routes 的简写
+);
 // 定义一个名为 button-counter 的新组件
 Vue.component('Home', {
-  data: function () {
-    return {
-      count: 0
-    }
-  },
-  template: '#Home'
-})
+  template: '<div>我是主页组件</div>',
+});
 Vue.component('Set', {
-  data: function () {
-    return {
-      count: 0
-    }
-  },
-  template: '#Set'
-})
+  template: '<div>我是设置组件</div>',
+});
+/*
 Vue.component('child', {
   data: function () {
     return {
@@ -58,10 +52,10 @@ Vue.component('child', {
   },
   template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 })
-
+*/
 new Vue({
     el:"#app",
-    router:routers,
+    router:router,
     data:{
         message:"Hi!"
     }
