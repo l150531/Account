@@ -14,8 +14,8 @@
         {{ message }}<br>
         <child></child>
         
-        <router-link to='/home'></router-link>
-        <router-link to='/set'></router-link>
+        <router-link to="/home"></router-link>
+        <router-link to="/set"></router-link>
         <router-view></router-view>
     </div>
 </body>
@@ -61,7 +61,7 @@ Vue.component('child', {
 
 new Vue({
     el:"#app",
-    routers,
+    router:routers,
     data:{
         message:"Hi!"
     }
