@@ -148,4 +148,4 @@ vue-router使用步骤：
 在HTML中使用<route-link to="/home"></route-link>表示链接按钮
 6、使用<router-view></router-view>标签显示点击的组件页面
 
-vue-router组件之间进行传参，
+vue-router组件之间进行传参；
