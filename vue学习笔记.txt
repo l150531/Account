@@ -150,4 +150,4 @@ vue-router使用步骤：
 
 vue-router组件之间进行传参；
 
-vue-resource的用法：
+vue-resource的用法
