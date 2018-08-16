@@ -149,3 +149,5 @@ vue-router使用步骤：
 6、使用<router-view></router-view>标签显示点击的组件页面
 
 vue-router组件之间进行传参；
+
+vue-resource的用法：
