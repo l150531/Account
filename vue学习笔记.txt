@@ -15,7 +15,8 @@ Vue工程化步骤：
 1、webpack是前端模块化和打包工具，webpack.config.js是它的核心文件。
 2、安装完webpack文件。在它里面的index.html文件中使用<script></script>标签包裹住编译后生成的文件
 build.js文件。
-3、main.js文件是整个项目的入口文件，
+3、main.js文件是整个项目的入口文件，注意：在main.js中导入的库全局都可以使用，在.vue中导入的库还在导入该库的文件中使用，
+  在其他.vue文件中是无法使用该库的。
 4、在package.json文件中加载项目中用到各种组件。
 5、app.vue文件是组件的入口文件。
 
@@ -45,4 +46,108 @@ build.js文件。
 
 3、.Vue文件是在Vue工程中的页面的显示文件。一个.Vue文件就是一个组件。
 4、.Vue文件格式浏览器不认识，需要在webpack中加载vue-loader，用它来对.vue文件进行解析。
-5、
+
+
+
+组件间通信：
+父子组件定义:
+组件分为全局组件和局部组件，不论是全局组件还是局部组件他们都有可能有子组件。
+子组件就是在组件内部再重新定义组件。比如：
+局部组件：
+vm =new Vue({
+  el:'#app',
+  data:{
+    data1:''
+  }
+  components:{
+    'my-parents':{
+      template:'<div></div>'
+      data(){}
+      components:{
+        'my-child':{
+          template:'<div></div>'
+        }
+      }
+    }
+  }
+})
+在这里就可以看出来子组件是定义在父组件中的。这种组件之间的关系就是父子组件。
+1、父子组件通信：
+  父组件数据传给子组件的步骤：
+   （1）、要在父组件中引用子组件
+    在父组件的HTML代码中会引用子组件
+    <body>
+    <div>
+    <my-child></my-child>
+    </div>
+    </body>
+    (2)、在父组件中引用的子组件标签中需要引入父组件的数据，格式如下：
+    <my-child :message="父组件中的数据名字"></my-child>
+    这里message是自己定义的子组件的一个变量名，
+    把所需要的父组件的数据的名字传给子组件定义的变量名message。
+    （3）、在子组件定义的内部需要使用props:[message]的形式，然后
+    在子组件内部就可以使用message变量来表示从父组件接收过来的数据，对它进行项目所需的处理。
+
+
+
+
+  子组件的数据传给父组件按照以下的步骤：
+  （1）、在子组件中使用this.$emit('e-child',data);
+   (2)、在父组件中调用子组件的地方添加e-child标示，如下：
+    <body>
+    <div>
+    <my-child @e-child='getchilddata'></my-child>
+    </div>
+    </body>
+    这样子组件传过来的数据就被父组件的getchilddata方法获取到了。
+  （3）、在父组件的getchilddata方法中处理子组件this.$emit传递过来的数据即可。
+
+
+
+2、非父子组件之间通信
+1、var BUS= Vue new();
+2、在需要传参的组件中调用
+Bus.$emit('data-a',参数1);
+3、在接收传参的组件中使用
+Bus.$on('data-a',name=>{
+    this.参数=参数1;
+})
+或者使用如下形式：
+Bus.$on('data-a',function(name){
+    this=__this;
+    this.参数=参数1;
+})
+这样就实现了非父子组件间的通信
+
+
+
+Vue和后台之间进行交互使用Axios
+Vue本地存储可以使用vue-resource
+vue页面之间跳转使用路由：vue-router
+vue-router使用步骤：
+1、在<Script></Script>中引入vue-router；
+2、配置路由链接：
+  const routes =[
+    {path:'/home',component:Home}
+    {path:'/news',component:News} //path后面的就是component后面组件对应的路由，component后面表示引入的组件
+    {path:'/',redirect:'/home'}   //默认显示
+  ];
+3、定义router
+  const route = New VueRouter({     //这里route是固定写法，不能用其他写法；
+    routers,                        //这里的routers也是固定写法
+  })
+4、在根实例中，加入router;例如：
+    var vm = New Vue({
+        el:'#app',
+        router,
+        data{
+          
+        },
+    })  
+5、引用路由
+在HTML中使用<route-link to="/home"></route-link>表示链接按钮
+6、使用<router-view></router-view>标签显示点击的组件页面
+
+vue-router组件之间进行传参；
+
+vue-resource的用法
