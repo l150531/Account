@@ -1,3 +1,29 @@
+本地有修改和提交，如何强制用远程的库更新。
+出现这种情况一般是git本地有commit，但是不能更新，也不能cleanup，导致无法push到服务器。
+做好备份，放弃本地修改，用远程内容reset本地目录，
+  git fetch --all
+  git reset --hard origin/master
+
+
+
+git使用https时，若出现SSL证书问题，可以按如下忽略：
+
+git config --global http.sslVerify false
+
+然后配置免密码登陆：
+
+git config --global credential.helper store
+
+如果修改了git密码，则会报错。此时执行：
+
+git config --global user.passwd "your_password"
+
+再次pull或者push时，会重新让你输入用户名密码，输入一次之后即可更新本地保存的。
+
+
+
+
+
 render函数中的createElement方法有三个参数。第一个参数为外层标签名，第二个为外层标签的属性对象，第三个为外层标签中的内容。
 例如：
     render(createElement) {
