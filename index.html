@@ -48,10 +48,10 @@
       
        
       <!--Bill组件的HTML代码要写在index.html中的HTML中-->
-      <script type="text/x-template" id="Bill-Menu">
+      <script type="text/x-template" id="Bill-Menu">        
         <div class="col-md-12 table-responsive">
         <table class="table table-striped table-bordered table-hover">
-            <th colspan="10" style='vertical-align: middle;text-align: center;'><h3>当前进账单</h3>
+            <th colspan="10" style='vertical-align: middle;text-align: center;'><h3>当前进账单/特种转账</h3>
             </th> 
             <tr>
               <th colspan="5" style='vertical-align: middle;text-align: right;'>日期:</th>
@@ -138,7 +138,7 @@
                 </tr> 
             </tfoot>
         </table>
-      </div>
+      </div>  
       </script>
       
       <!--设置组件-->
@@ -146,39 +146,51 @@
       <script type="text/x-template" id="Set-Menu">
         <div class="col-md-12 table-responsive">
         <table class="table table-striped table-bordered table-hover">
-            <th colspan="12" style='vertical-align: middle;text-align: center;'><h3>参数设置</h3>
+            <th colspan="12" style='vertical-align: middle;text-align: center;'><h3>进账单/特种转账参数设置</h3>
             </th>  
             <tbody>
                 <tr>
                   <td style='vertical-align: middle;text-align: right;'>出票人</td>
                   <td style='vertical-align: middle;text-align: right;'>全称</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="All_Name_Out" id="All_Name_Out" class="form-control"/>
+                  </td>
                   <td style='vertical-align: middle;text-align: center;'>收票人</td>
                   <td style='vertical-align: middle;text-align: right;'>全称</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="All_Name_In" id="All_Name_In" class="form-control"/>
+                  </td>
                 </tr>
                 <tr>
                   <td style='vertical-align: middle;text-align: right;'>出票人</td>
                   <td style='vertical-align: middle;text-align: right;'>账号</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="Account_Out" id="Account_Out" class="form-control"/>
+                  </td>
                   <td style='vertical-align: middle;text-align: center;'>收票人</td>
                   <td style='vertical-align: middle;text-align: right;'>账号</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="Account_In" id="Account_In" class="form-control"/>
+                  </td>
                 </tr>
                 <tr>
                   <td style='vertical-align: middle;text-align: right;'>出票人</td>
                   <td style='vertical-align: middle;text-align: right;'>银行</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="Bank_Out" id="Bank_Out" class="form-control"/>
+                  </td>
                   <td style='vertical-align: middle;text-align: center;'>收票人</td>
                   <td style='vertical-align: middle;text-align: right;'>银行</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="Bank_In" id="Bank_In" class="form-control"/>
+                  </td>
                 </tr>
       
             </tbody>
             </tfoot>
                 <tr>
-                <td colspan="10" style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" name="Submit" value="出票数据保存" /></td>
-                <td colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" name="Submit" value="入票数据保存" /></td>
+                <td colspan="10" style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" name="Submit_Out" id="Submit_Out" value="出票数据保存" /></td>
+                <td colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" name="Submit_In" id="Submit_In" value="入票数据保存" /></td>
                 </tr>                 
             </tfoot>
         </table>
@@ -197,8 +209,13 @@
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="js/site.js"></script>
+<script src="json2.js"></script>
+<script src="Localstorage.js"></script>
 <script type="text/javascript">
-
+//创建或打开名称为products，版本为1.0,描述为产品数据库，10M大小的数据库
+var db = openDatabase("products", 1.0, "票据数据库", 1024 * 1024 * 10, function() {
+  console.log("创建数据库完成");
+});
 new Vue({
     el:"#app",
     data:{
@@ -231,7 +248,8 @@ $(function() {
 		  $('#hidden_event2').show();
 		  $('#hidden_event1').hide();
 		  }
-		})       
+    }) 
+                  
 });      
 </script>
 
