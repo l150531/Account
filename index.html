@@ -36,22 +36,29 @@
         <child></child>
       -->
       <center>
-        <input name="button" type="button" id="click_event1" value="打印进账单" class="btn btn-primary btn-sm"/>
-        <input name="button" type="button" id="click_event2" value="打印位置设置" class="btn btn-primary btn-sm"/>      
+        <input name="button" type="button" id="click_event1" value="打印单据" class="btn btn-primary"/>
+        <input name="button" type="button" id="click_event2" value="单据参数设置" class="btn btn-primary"/>      
       </center>
+     <!--
       <div id="hidden_event1">
         <Bill></Bill>
       </div>
+      -->
+      <div id="page1">
+          <div id="hidden_event1"></div>
+      </div>
+        
       <div id="hidden_event2">
         <Set></Set>
       </div>      
       
        
       <!--Bill组件的HTML代码要写在index.html中的HTML中-->
+      <!--
       <script type="text/x-template" id="Bill-Menu">        
         <div class="col-md-12 table-responsive">
         <table class="table table-striped table-bordered table-hover">
-            <th colspan="10" style='vertical-align: middle;text-align: center;'><h3>当前进账单/特种转账</h3>
+            <th colspan="10" style='vertical-align: middle;text-align: center;'><h3>当前进账单/特转</h3>
             </th> 
             <tr>
               <th colspan="5" style='vertical-align: middle;text-align: right;'>日期:</th>
@@ -134,65 +141,109 @@
             </tbody>
             </tfoot>
                 <tr>
-                <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" name="Submit" value="打 印" /></td>
-                </tr> 
+                <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" name="Submit" value="打 印" /></td>
+                <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" name="Submit" value="打 印 设 置" /></td>                
+              </tr> 
             </tfoot>
         </table>
       </div>  
       </script>
-      
+    -->
       <!--设置组件-->
          
       <script type="text/x-template" id="Set-Menu">
         <div class="col-md-12 table-responsive">
         <table class="table table-striped table-bordered table-hover">
-            <th colspan="12" style='vertical-align: middle;text-align: center;'><h3>进账单/特种转账参数设置</h3>
+            <th colspan="12" style='vertical-align: middle;text-align: center;'><h3>进账单/特转参数设置</h3>
             </th>  
             <tbody>
                 <tr>
-                  <td style='vertical-align: middle;text-align: right;'>出票人</td>
+                  <td rowspan="4" style='vertical-align: middle;text-align: right;'>出票人</td>
                   <td style='vertical-align: middle;text-align: right;'>全称</td>
                   <td colspan="3" style='vertical-align: middle;text-align: right;'>
                     <input type="text" name="All_Name_Out" id="All_Name_Out" class="form-control"/>
                   </td>
-                  <td style='vertical-align: middle;text-align: center;'>收票人</td>
+                  <td style='vertical-align: middle;text-align: left;'>                  
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" id="All_Name_Out_Add">添加</button>
+                      <button type="button" class="btn btn-danger" id="All_Name_Out_Delete">删除</button>
+                    </div>
+                  </td>
+                  <td rowspan="3" style='vertical-align: middle;text-align: center;'>收票人</td>
                   <td style='vertical-align: middle;text-align: right;'>全称</td>
                   <td colspan="3" style='vertical-align: middle;text-align: right;'>
                     <input type="text" name="All_Name_In" id="All_Name_In" class="form-control"/>
                   </td>
-                </tr>
-                <tr>
-                  <td style='vertical-align: middle;text-align: right;'>出票人</td>
-                  <td style='vertical-align: middle;text-align: right;'>账号</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
-                    <input type="text" name="Account_Out" id="Account_Out" class="form-control"/>
-                  </td>
-                  <td style='vertical-align: middle;text-align: center;'>收票人</td>
-                  <td style='vertical-align: middle;text-align: right;'>账号</td>
-                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
-                    <input type="text" name="Account_In" id="Account_In" class="form-control"/>
+                  <td style='vertical-align: middle;text-align: left;'>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" id="All_Name_In_Add">添加</button>
+                      <button type="button" class="btn btn-danger" id="All_Name_In_Delete">删除</button>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <td style='vertical-align: middle;text-align: right;'>出票人</td>
+                  <!--<td style='vertical-align: middle;text-align: right;'>出票人</td>-->
+                  <td style='vertical-align: middle;text-align: right;'>账号</td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="Accounted_Out" id="Accounted_Out" class="form-control"/>
+                  </td>
+                  <td style='vertical-align: middle;text-align: left;'>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" id="Accounted_Out_Add">添加</button>
+                      <button type="button" class="btn btn-danger" id="Accounted_Out_delete">删除</button>
+                    </div>
+                  </td>
+
+                  <!--<td style='vertical-align: middle;text-align: center;'>收票人</td>-->
+                  <td style='vertical-align: middle;text-align: right;'>账号</td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="Accounted_In" id="Accounted_In" class="form-control"/>
+                  </td>
+                  <td style='vertical-align: middle;text-align: left;'>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" id="Accounted_In_Add">添加</button>
+                      <button type="button" class="btn btn-danger" id="Accounted_In_Delete">删除</button>
+                    </div>                  
+                  </td>
+                </tr>
+                <tr>
+                  <!--<td style='vertical-align: middle;text-align: right;'>出票人</td>-->
                   <td style='vertical-align: middle;text-align: right;'>银行</td>
                   <td colspan="3" style='vertical-align: middle;text-align: right;'>
                     <input type="text" name="Bank_Out" id="Bank_Out" class="form-control"/>
                   </td>
-                  <td style='vertical-align: middle;text-align: center;'>收票人</td>
+                  <td style='vertical-align: middle;text-align: left;'>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" id="Bank_Out_Add">添加</button>
+                      <button type="button" class="btn btn-danger" id="Bank_Out_Delete">删除</button>
+                    </div>                  
+                  </td>
+                  <!--<td style='vertical-align: middle;text-align: center;'>收票人</td>-->
                   <td style='vertical-align: middle;text-align: right;'>银行</td>
                   <td colspan="3" style='vertical-align: middle;text-align: right;'>
                     <input type="text" name="Bank_In" id="Bank_In" class="form-control"/>
                   </td>
+                  <td style='vertical-align: middle;text-align: left;'>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" id="Bank_In_Add">添加</button>
+                      <button type="button" class="btn btn-danger" id="Bank_In_Delete">删除</button>
+                    </div>                  
+                  </td>
                 </tr>
-      
-            </tbody>
-            </tfoot>
                 <tr>
-                <td colspan="10" style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" name="Submit_Out" id="Submit_Out" value="出票数据保存" /></td>
-                <td colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" name="Submit_In" id="Submit_In" value="入票数据保存" /></td>
-                </tr>                 
-            </tfoot>
+                  <!--<td style='vertical-align: middle;text-align: right;'>出票人</td>-->
+                  <td style='vertical-align: middle;text-align: right;'>用途</td>
+                  <td colspan="3" style='vertical-align: middle;text-align: right;'>
+                    <input type="text" name="Use_Out" id="Use_Out" class="form-control"/>
+                  </td>
+                  <td style='vertical-align: middle;text-align: left;'>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" id="Use_Out_Add">添加</button>
+                      <button type="button" class="btn btn-danger" id="Use_Out_Delete">删除</button>
+                    </div>                  
+                  </td>
+                </tr>                
+            </tbody>
         </table>
       </div>     
       </script>
@@ -214,15 +265,16 @@
 <script type="text/javascript">
 //创建或打开名称为products，版本为1.0,描述为产品数据库，10M大小的数据库
 var db = openDatabase("products", 1.0, "票据数据库", 1024 * 1024 * 10, function() {
-  console.log("创建数据库完成");
-});
+        console.log("创建数据库完成");
+    });
 new Vue({
     el:"#app",
     data:{
         message:"Hi!"
     }
 });
-$(function() {			
+$(function() {		
+  $("#page1").load("Bill.html");	
 			$('#BBRQ').datetimepicker({				
 				language:  'zh-CN',
 				autoclose: 1,
@@ -249,7 +301,16 @@ $(function() {
 		  $('#hidden_event1').hide();
 		  }
     }) 
-                  
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "create table IF not EXISTS Bill(id integer primary key autoincrement,All_Name_Out text,Accounted_Out text,Bank_out text,Use text,All_Name_In text,Accounted_In text,Bank_In text)", [],
+            function(tx, result) {
+                console.log('创建出票人表成功');
+            },
+            function(tx, error) {
+                console.log('创建出票人表失败' + error.message);
+        });                                         
+    });                       
 });      
 </script>
 
