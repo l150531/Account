@@ -208,7 +208,7 @@ $(function() {
     $('#Add_Info_Add').click(function(){  
         db.transaction(function(tx) {  
             tx.executeSql(
-                "insert into Bill (Add_Info) values(?)",[$("#Add_Info").val()],
+                "insert into Bill (Add_Info) values(?)",[$("#Info_Add").val()],
                 function() {
                     alert('添加附加信息成功!');
                 },
@@ -223,7 +223,7 @@ $(function() {
     $('#Add_Info_Delete').click(function(){
         db.transaction(function(tx) {  
             tx.executeSql(
-                "delete from Bill where Use=?",[$("#Add_Info").val()],
+                "delete from Bill where Use=?",[$("#Info_Add").val()],
                 function() {
                     alert('删除附加信息成功!');
                 },
@@ -232,24 +232,6 @@ $(function() {
             });                                         
         });
     });   
-
-
-    $('#Out_Name').change(function(){
-        alert(231);
-        db.transaction(function(tx) {  
-            tx.executeSql(
-                "select All_Name_Out from Bill",[],
-                function(tx, result) {
-                    for (var i=0;i<result.rows.length;i++) {
-                        console.log(rs.rows.item(i).name, rs.rows.item(i).value);
-                        $("#Out_Name.selectpicker").append("<option value='"+result.rows.item(i)["All_Name_Out"]+"'>"+result.rows.item(i)["All_Name_Out"]+"</option>");
-                    }
-                },
-                function() {
-                    alert('删除附加信息失败!');
-            });                                         
-        });
-    });
 
 
 

@@ -1,118 +1,362 @@
-//定义当前应用的对象
-var dbApp={
-    //打开数据库
-    openDb:function()
-    {
-        //创建名称为products，版本为1.0,描述为产品数据库，10M大小的数据库
-        var db = openDatabase("products", 1.0, "票据数据库", 1024 * 1024 * 10, function() {
+$(function() {
+    /*
+    //创建数据库
+    var db = openDatabase("products", 1.0, "票据数据库", 1024 * 1024 * 10, function() {
         console.log("创建数据库完成");
-        });             
-    },
-    //初始化
-    init:function()
-    {
-        //打开或创建数据库
-        this.openDb();
-        //打开或创建数据表
-        this.createTable();
-        //绑定事件
-        //this.bindEvent();
-        //展示数据
-        //this.select();
-        //this.log("初始化完成");
-    },
-    //绑定事件
-    bindEvent:function()
-    {
-        //添加事件
-        $("#btnInsert").click(this.insert);
-        $("#btnUpdate").click(this.update);
-        $("#btnCreateTable").click(this.createTable);
-        $("#btnDropTable").click(this.dropTable);
-    },
-    //显示消息
-    log:function(info) {
-        $("#msg")[0].innerHTML += info + "<br/>";
-    },
-    //执行sql的通用方法 result.rowsAffected 影响行数
-    //callback执行成功时的回调方法
-    exeSql:function(sql,title,param,callback) {
-        title=title||"操作";
-        this.db.transaction(function(tx) {
-            tx.executeSql(
-                sql, param||[],
-                function(tx, result) {
-                    dbApp.log(title+'成功');
-                    if(callback){  //如果有参数
-                        callback(result);
+    });
+    */
+    //创建数据表
+    db.transaction(function(tx) {      
+        tx.executeSql(
+            "create table IF not EXISTS Bill(id integer primary key autoincrement,All_Name_Out text,Accounted_Out text,Bank_out text,Use text,All_Name_In text,Accounted_In text,Bank_In text,Add_Info text)", [],
+            function(tx, result) {
+                console.log('创建出票人表成功');
+            },
+            function(tx, error) {
+                console.log('创建出票人表失败' + error.message);
+        });
+
+/*    删除数据表    
+        tx.executeSql(
+            "drop table Bill", [],
+            function(tx, result) {
+                console.log('删除表成功');
+            },
+            function(tx, error) {
+                console.log('删除表失败' + error.message);
+        });
+*/        
+    });  
+    //获取数据表数据
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select All_Name_Out from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).All_Name_Out != null){
+                      $("#Out_Name.selectpicker").append("<option value='"+result.rows.item(i).All_Name_Out+"'>"+result.rows.item(i).All_Name_Out+"</option>");
                     }
-                },
-                function(tx, error) {
-                    dbApp.log(title+'失败' + error.message);
-                });
-        });
-    },
-    //创建表
-    createTable:function() {
-        dbApp.exeSql("create table IF not EXISTS Bill(id integer primary key autoincrement,All_Name_Out text,Accounted_Out text,Bank_out text,Use text,All_Name_In text,Accounted_In text,Bank_In text)","创建表");
+                    else{
 
-    },
-    //删除表
-    dropTable:function() {
-        dbApp.exeSql("drop table IF EXISTS Bill","删除表");
-    },
-    //展示，加载数据
-    select:function() {
-        dbApp.exeSql("select id,name,price from Bill","查询",[],function(result) {
-                //将表格中tr索引大于0的元素删除
-                    $("#tabGoods tr:gt(0)").remove();
-                    for(var i = 0; i < result.rows.length; i++) {
-                        var tr = $("<tr/>");
-
-                        $("<td/>").text(result.rows.item(i)["id"]).appendTo(tr);
-                        $("<td/>").text(result.rows.item(i)["name"]).appendTo(tr);
-                        $("<td/>").text(result.rows.item(i)["price"]).appendTo(tr);
-                        var del = $("<a href='#' onclick='dbApp.del(" + result.rows.item(i)["id"] + ",this)' >删除 | </a>")
-                        var edit = $("<a href='#' onclick='dbApp.edit(" + result.rows.item(i)["id"] + ",this)' >修改</a>")
-                        $("<td/>").append(del).append(edit).appendTo(tr);
-                        tr.appendTo("#tabGoods");
                     }
-                    });
-    },
-    //插入数据
-    insert:function() {
-        //如果insert方法被绑定为事件，则this表示事件发生的对象
-        dbApp.exeSql("insert into Bill(name,price) values(?,?)","添加",[$("#name").val(), $("#price").val()],function(){
-            dbApp.select();
-        });
-    },
-    //删除 
-    del:function(id, link) {
-        dbApp.exeSql("delete from Bill where id=?","删除",[id],function(result){
-            //查找a标签最近的一个tr父元素，移除
-            $(link).closest("tr").remove();
-        });
-    },
-    //编辑
-    edit:function(id) {
-        dbApp.exeSql("select id,name,price from Bill where id=?","编辑",[id],function(result) {
-                    $("#name").val(result.rows.item(0)["name"]);
-                    $("#price").val(result.rows.item(0)["price"]);
-                    $("#goodsId").val(result.rows.item(0)["id"]);
-                    dbApp.log("修改后请保存");
-            });
-    },
-    //更新
-    update:function() {
-        if($("#goodsId").val()) {
-            dbApp.exeSql("update Out set name=?,price=?  where id=?","更新",[$("#name").val(), $("#price").val(), $("#goodsId").val()],function(result) {
-                        dbApp.select();
-                        $("#goodsId").val("");
-            });
-        } else {
-            dbApp.log("请选择要更新的记录 ");
-        }
-    }
-};
+                  }
+                  $("#Out_Name").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select All_Name_In from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).All_Name_In != null){
+                      $("#In_Name.selectpicker").append("<option value='"+result.rows.item(i).All_Name_In+"'>"+result.rows.item(i).All_Name_In+"</option>");
+                    }
+                    else{
 
- 
+                    }
+                  }
+                  $("#In_Name").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Accounted_Out from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Accounted_Out != null){
+                      $("#Out_Accounted.selectpicker").append("<option value='"+result.rows.item(i).Accounted_Out+"'>"+result.rows.item(i).Accounted_Out+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Out_Accounted").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Accounted_In from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Accounted_In != null){
+                      $("#In_Accounted.selectpicker").append("<option value='"+result.rows.item(i).Accounted_In+"'>"+result.rows.item(i).Accounted_In+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#In_Accounted").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Bank_out from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Bank_out != null){
+                      $("#Out_Bank.selectpicker").append("<option value='"+result.rows.item(i).Bank_out+"'>"+result.rows.item(i).Bank_out+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Out_Bank").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Bank_In from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Bank_In != null){
+                      $("#In_Bank.selectpicker").append("<option value='"+result.rows.item(i).Bank_In+"'>"+result.rows.item(i).Bank_In+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#In_Bank").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Use from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Use != null){
+                      $("#Use.selectpicker").append("<option value='"+result.rows.item(i).Use+"'>"+result.rows.item(i).Use+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Use").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Add_Info from Bill",[],
+            function(tx, result) {
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Add_Info != null){
+                      $("#Add_Info.selectpicker").append("<option value='"+result.rows.item(i).Add_Info+"'>"+result.rows.item(i).Add_Info+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Add_Info").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+
+
+
+
+
+
+});
+$.extend({getsqldata:function(){
+
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select All_Name_Out from Bill",[],
+            function(tx, result) {
+                $("#Out_Name").empty();
+                $("#Out_Name_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).All_Name_Out != null){
+                      $("#Out_Name_2.selectpicker").append("<option value='"+result.rows.item(i).All_Name_Out+"'>"+result.rows.item(i).All_Name_Out+"</option>");
+                      $("#Out_Name.selectpicker").append("<option value='"+result.rows.item(i).All_Name_Out+"'>"+result.rows.item(i).All_Name_Out+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Out_Name_2").selectpicker('refresh');
+                  $("#Out_Name").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select All_Name_In from Bill",[],
+            function(tx, result) {
+                $("#In_Name").empty();
+                $("#In_Name_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).All_Name_In != null){
+                      $("#In_Name_2.selectpicker").append("<option value='"+result.rows.item(i).All_Name_In+"'>"+result.rows.item(i).All_Name_In+"</option>");
+                      $("#In_Name.selectpicker").append("<option value='"+result.rows.item(i).All_Name_In+"'>"+result.rows.item(i).All_Name_In+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#In_Name_2").selectpicker('refresh');
+                  $("#In_Name").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Accounted_Out from Bill",[],
+            function(tx, result) {
+                $("#Out_Accounted").empty();
+                $("#Out_Accounted_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Accounted_Out != null){
+                      $("#Out_Accounted_2.selectpicker").append("<option value='"+result.rows.item(i).Accounted_Out+"'>"+result.rows.item(i).Accounted_Out+"</option>");
+                      $("#Out_Accounted.selectpicker").append("<option value='"+result.rows.item(i).Accounted_Out+"'>"+result.rows.item(i).Accounted_Out+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Out_Accounted_2").selectpicker('refresh');
+                  $("#Out_Accounted").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Accounted_In from Bill",[],
+            function(tx, result) {
+                $("#In_Accounted").empty();
+                $("#In_Accounted_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Accounted_In != null){
+                      $("#In_Accounted_2.selectpicker").append("<option value='"+result.rows.item(i).Accounted_In+"'>"+result.rows.item(i).Accounted_In+"</option>");
+                      $("#In_Accounted.selectpicker").append("<option value='"+result.rows.item(i).Accounted_In+"'>"+result.rows.item(i).Accounted_In+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#In_Accounted_2").selectpicker('refresh');
+                  $("#In_Accounted").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Bank_out from Bill",[],
+            function(tx, result) {
+                $("#Out_Bank").empty();
+                $("#Out_Bank_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Bank_out != null){
+                      $("#Out_Bank_2.selectpicker").append("<option value='"+result.rows.item(i).Bank_out+"'>"+result.rows.item(i).Bank_out+"</option>");
+                      $("#Out_Bank.selectpicker").append("<option value='"+result.rows.item(i).Bank_out+"'>"+result.rows.item(i).Bank_out+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Out_Bank_2").selectpicker('refresh');
+                  $("#Out_Bank").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Bank_In from Bill",[],
+            function(tx, result) {
+                $("#In_Bank").empty();
+                $("#In_Bank_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Bank_In != null){
+                      $("#In_Bank_2.selectpicker").append("<option value='"+result.rows.item(i).Bank_In+"'>"+result.rows.item(i).Bank_In+"</option>");
+                      $("#In_Bank.selectpicker").append("<option value='"+result.rows.item(i).Bank_In+"'>"+result.rows.item(i).Bank_In+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#In_Bank_2").selectpicker('refresh');
+                  $("#In_Bank").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Use from Bill",[],
+            function(tx, result) {
+                $("#Use").empty();
+                $("#Use_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Use != null){
+                      $("#Use_2.selectpicker").append("<option value='"+result.rows.item(i).Use+"'>"+result.rows.item(i).Use+"</option>");
+                      $("#Use.selectpicker").append("<option value='"+result.rows.item(i).Use+"'>"+result.rows.item(i).Use+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Use_2").selectpicker('refresh');
+                  $("#Use").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    db.transaction(function(tx) {  
+        tx.executeSql(
+            "select Add_Info from Bill",[],
+            function(tx, result) {
+                $("#Add_Info").empty();
+                $("#Add_Info_2").empty();
+                for (var i=0;i<result.rows.length;i++) {
+                    if(result.rows.item(i).Add_Info != null){
+                      $("#Add_Info_2.selectpicker").append("<option value='"+result.rows.item(i).Add_Info+"'>"+result.rows.item(i).Add_Info+"</option>");
+                      $("#Add_Info.selectpicker").append("<option value='"+result.rows.item(i).Add_Info+"'>"+result.rows.item(i).Add_Info+"</option>");
+                    }
+                    else{
+
+                    }
+                  }
+                  $("#Add_Info_2").selectpicker('refresh');
+                  $("#Add_Info").selectpicker('refresh');
+            },
+            function() {
+                alert('删除附加信息失败!');
+        });                                         
+    });
+    
+}
+});
