@@ -1,10 +1,10 @@
 $(function() {
-    /*
+/*    
     //创建数据库
     var db = openDatabase("products", 1.0, "票据数据库", 1024 * 1024 * 10, function() {
         console.log("创建数据库完成");
     });
-    */
+*/  
     //创建数据表
     db.transaction(function(tx) {      
         tx.executeSql(
@@ -41,10 +41,7 @@ $(function() {
                     }
                   }
                   $("#Out_Name").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -59,10 +56,7 @@ $(function() {
                     }
                   }
                   $("#In_Name").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -77,10 +71,7 @@ $(function() {
                     }
                   }
                   $("#Out_Accounted").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -95,10 +86,7 @@ $(function() {
                     }
                   }
                   $("#In_Accounted").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -113,10 +101,7 @@ $(function() {
                     }
                   }
                   $("#Out_Bank").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -131,10 +116,7 @@ $(function() {
                     }
                   }
                   $("#In_Bank").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -149,10 +131,7 @@ $(function() {
                     }
                   }
                   $("#Use").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -167,10 +146,7 @@ $(function() {
                     }
                   }
                   $("#Add_Info").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
 
 
@@ -187,6 +163,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#Out_Name").empty();
                 $("#Out_Name_2").empty();
+                $("#Out_Name.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#Out_Name_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).All_Name_Out != null){
                       $("#Out_Name_2.selectpicker").append("<option value='"+result.rows.item(i).All_Name_Out+"'>"+result.rows.item(i).All_Name_Out+"</option>");
@@ -198,10 +176,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#Out_Name_2").selectpicker('refresh');
                   $("#Out_Name").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -209,6 +184,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#In_Name").empty();
                 $("#In_Name_2").empty();
+                $("#In_Name.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#In_Name_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).All_Name_In != null){
                       $("#In_Name_2.selectpicker").append("<option value='"+result.rows.item(i).All_Name_In+"'>"+result.rows.item(i).All_Name_In+"</option>");
@@ -220,10 +197,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#In_Name_2").selectpicker('refresh');
                   $("#In_Name").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -231,6 +205,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#Out_Accounted").empty();
                 $("#Out_Accounted_2").empty();
+                $("#Out_Accounted.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#Out_Accounted_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).Accounted_Out != null){
                       $("#Out_Accounted_2.selectpicker").append("<option value='"+result.rows.item(i).Accounted_Out+"'>"+result.rows.item(i).Accounted_Out+"</option>");
@@ -242,10 +218,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#Out_Accounted_2").selectpicker('refresh');
                   $("#Out_Accounted").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -253,6 +226,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#In_Accounted").empty();
                 $("#In_Accounted_2").empty();
+                $("#In_Accounted.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#In_Accounted_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).Accounted_In != null){
                       $("#In_Accounted_2.selectpicker").append("<option value='"+result.rows.item(i).Accounted_In+"'>"+result.rows.item(i).Accounted_In+"</option>");
@@ -264,10 +239,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#In_Accounted_2").selectpicker('refresh');
                   $("#In_Accounted").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -275,6 +247,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#Out_Bank").empty();
                 $("#Out_Bank_2").empty();
+                $("#Out_Bank.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#Out_Bank_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).Bank_out != null){
                       $("#Out_Bank_2.selectpicker").append("<option value='"+result.rows.item(i).Bank_out+"'>"+result.rows.item(i).Bank_out+"</option>");
@@ -286,10 +260,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#Out_Bank_2").selectpicker('refresh');
                   $("#Out_Bank").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -297,6 +268,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#In_Bank").empty();
                 $("#In_Bank_2").empty();
+                $("#In_Bank.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#In_Bank_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).Bank_In != null){
                       $("#In_Bank_2.selectpicker").append("<option value='"+result.rows.item(i).Bank_In+"'>"+result.rows.item(i).Bank_In+"</option>");
@@ -308,10 +281,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#In_Bank_2").selectpicker('refresh');
                   $("#In_Bank").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -319,6 +289,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#Use").empty();
                 $("#Use_2").empty();
+                $("#Use.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#Use_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).Use != null){
                       $("#Use_2.selectpicker").append("<option value='"+result.rows.item(i).Use+"'>"+result.rows.item(i).Use+"</option>");
@@ -330,10 +302,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#Use_2").selectpicker('refresh');
                   $("#Use").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -341,6 +310,8 @@ $.extend({getsqldata:function(){
             function(tx, result) {
                 $("#Add_Info").empty();
                 $("#Add_Info_2").empty();
+                $("#Add_Info.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
+                $("#Add_Info_2.selectpicker").append("<option value='==请选择=='>==请选择==</option>");
                 for (var i=0;i<result.rows.length;i++) {
                     if(result.rows.item(i).Add_Info != null){
                       $("#Add_Info_2.selectpicker").append("<option value='"+result.rows.item(i).Add_Info+"'>"+result.rows.item(i).Add_Info+"</option>");
@@ -352,10 +323,7 @@ $.extend({getsqldata:function(){
                   }
                   $("#Add_Info_2").selectpicker('refresh');
                   $("#Add_Info").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
+            });                                         
     });
     
 }

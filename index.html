@@ -11,6 +11,7 @@
 	<link href="css/bootstrap-select.min.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+  
 	<style type="text/css">
 		#hidden_event1{
 		  .STYLE1 {font-size: 12px}
@@ -21,9 +22,26 @@
 		#hidden_event3{
       display:none;
 		}
-		.tips { color:#f00; font-size:25px; }					
+    #hidden_event4{
+      display:none;
+		}
+		.tips { color:#f00; font-size:25px; }	
+    #bg{
+      background-image:url(image/进账单.jpg);
+      background-size:1646px 748px;
+      background-repeat:no-repeat;
+    }	
+    			
 	</style>  
 
+<style media="print" type="text/css">
+    /*取消页眉和页脚*/
+     @("@")page 
+    {
+        size:  auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }  
+</style>
 </head>
 <body>
     <div id="app">
@@ -52,6 +70,31 @@
       </div>      
       <div id="hidden_event3">
         <Normal></Normal>
+      </div>
+      <div id="hidden_event4">
+        <div id="print">
+          <table id="bg" style="width:1646px; height:748px;">                        
+            <tr>                            
+                <td id="Out_Name_3"></td><td>全称</td>                        
+            </tr>                        
+            <tr>                            
+                <td>账号</td><td>账号</td>                        
+            </tr>                        
+            <tr>                            
+                <td>银行</td><td>银行</td>                        
+            </tr>  
+            <tr>                            
+              <td>人民币</td><td>130.00</td>                        
+            </tr> 
+            <tr>                            
+              <td>票据种类</td><td>票据张数</td>                        
+            </tr> 
+            <tr>                            
+              <td>票据号码</td>                      
+            </tr>                   
+        </table> 
+  
+        </div>
       </div>      
        
       <!--进账单组件，Bill组件的HTML代码要写在index.html中的HTML中-->
@@ -145,7 +188,7 @@
                   <tr>
                     <td style='vertical-align: middle;text-align: right;'>出票人</td>
                     <td style='vertical-align: middle;text-align: right;'>金额</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Money" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: right;'>票据种类</td>
                     <td>
                       <div class="form-group">
@@ -190,8 +233,8 @@
               </tbody>
               </tfoot>
                   <tr>
-                  <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" name="Submit" value="打 印" /></td>
-                  <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" name="Submit" value="打 印 设 置" /></td>                
+                  <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" id="click_event4" value="打 印" /></td>
+                  <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet" value="打 印 设 置" /></td>                
                 </tr> 
               </tfoot>
         </table>
@@ -219,9 +262,9 @@
               <tbody>
                   <tr>
                       <td colspan="10" style='vertical-align: middle;text-align: left;'>
-                        <div class="checkbox">
+                        <div class="checkbox" id="box">
                           <label class="checkbox-inline">
-                            <input type="checkbox" value="普通" >普通 
+                            <input type="checkbox" value="普通" checked="checked">普通 
                           </label>
                           <label class="checkbox-inline">
                             <input type="checkbox" value="加急" >加急
@@ -470,15 +513,18 @@
 <script src="Set.js"></script>
 <script src="Normal.js"></script>
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.1.0.js"></script>
 <script src="js/bootstrap.min.js"></script>	
 <script src="js/bootstrap-select.min.js"></script>
 <script src="js/defaults-zh_CN.min.js"></script>
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="js/site.js"></script>
+<script src="js/jquery.jqprint-0.3.js"></script>
 <script src="json2.js"></script>
 <script src="Localstorage.js"></script>
 <script src="websql.js"></script>
+<script src="ChangeCss.js"></script>
 <script type="text/javascript">
 //创建或打开名称为products，版本为1.0,描述为产品数据库，10M大小的数据库
 
@@ -492,7 +538,11 @@ var db = openDatabase("products", 1.0, "票据数据库", 1024 * 1024 * 10, func
         message:"Hi!"
     }
 });
-$(function() {		
+$(function() {
+      //checkbox只能二选一
+      $('#box').find('input[type=checkbox]').bind('click', function(){
+        $('#box').find('input[type=checkbox]').not(this).attr("checked", false);
+      });		
 			$('#BBRQ').datetimepicker({				
 				language:  'zh-CN',
 				autoclose: 1,
@@ -523,6 +573,7 @@ $(function() {
 				$('#hidden_event1').show();
         $('#hidden_event2').hide();
         $('#hidden_event3').hide();
+        $('#hidden_event4').hide();
       }
       $.getsqldata();
 /*      
@@ -554,6 +605,7 @@ $(function() {
 		  $('#hidden_event2').show();
       $('#hidden_event1').hide();
       $('#hidden_event3').hide();
+      $('#hidden_event4').hide();
       }
      
     });
@@ -563,9 +615,22 @@ $(function() {
 		  $('#hidden_event3').show();
       $('#hidden_event1').hide();
       $('#hidden_event2').hide();
+      $('#hidden_event4').hide();
       }
       $.getsqldata();
-    });     
+    });    
+    $('#click_event4').click(function(){
+		  if($("#hidden_event4").css("display")=="none"){
+		//if($('#hidden_event1').is(':hidden')){
+		  $('#hidden_event4').show();
+      $('#hidden_event1').hide();
+      $('#hidden_event2').hide();
+      $('#hidden_event3').hide();
+      }
+      //$("#print").jqprint({});
+      //$.getcssdata();
+    });  
+/*
     db.transaction(function(tx) {      
         tx.executeSql(
             "create table IF not EXISTS Bill(id integer primary key autoincrement,All_Name_Out text,Accounted_Out text,Bank_out text,Use text,All_Name_In text,Accounted_In text,Bank_In text,Add_Info text)", [],
@@ -576,7 +641,7 @@ $(function() {
                 console.log('创建出票人表失败' + error.message);
         });
 
-/*        
+        
         tx.executeSql(
             "drop table Bill", [],
             function(tx, result) {
@@ -585,8 +650,9 @@ $(function() {
             function(tx, error) {
                 console.log('删除表失败' + error.message);
         });
-*/        
+       
     });
+*/     
 /*      
     db.transaction(function(tx) {  
         tx.executeSql(
@@ -607,6 +673,10 @@ $(function() {
         });                                         
     });
 */
+
+  
+     
+
 });      
 </script>
 
