@@ -75,22 +75,22 @@
         <div id="print">
           <table id="bg" style="width:1646px; height:748px;">                        
             <tr>                            
-                <td id="Out_Name_3"></td><td>全称</td>                        
+                <td id="Out_Name_3"></td><td id="In_Name_3"></td>                        
             </tr>                        
             <tr>                            
-                <td>账号</td><td>账号</td>                        
+              <td id="Out_Accounted_3"></td><td id="In_Accounted_3"></td>                        
             </tr>                        
             <tr>                            
-                <td>银行</td><td>银行</td>                        
+              <td id="Out_Bank_3"></td><td id="In_Bank_3"></td>                        
             </tr>  
             <tr>                            
-              <td>人民币</td><td>130.00</td>                        
+              <td id="Money_complex_3"></td><td id="Money_Arab_3"></td>                        
             </tr> 
             <tr>                            
-              <td>票据种类</td><td>票据张数</td>                        
+              <td id="Bill_Type_3"></td><td id="Bill_Count_3"></td>                        
             </tr> 
             <tr>                            
-              <td>票据号码</td>                      
+              <td id="Bill_Num_3"></td>                      
             </tr>                   
         </table> 
   
@@ -188,11 +188,11 @@
                   <tr>
                     <td style='vertical-align: middle;text-align: right;'>出票人</td>
                     <td style='vertical-align: middle;text-align: right;'>金额</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Money" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Money_Arab" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: right;'>票据种类</td>
                     <td>
                       <div class="form-group">
-                        <select name="BillSpec" class="form-control selectpicker">
+                        <select id="BillSpec" class="form-control selectpicker">
                         <option selected="selected" values="==请选择==">==请选择==</option>
                         <option value="转账支票">转账支票</option>
                         <option value="银行汇票">银行汇票</option>
@@ -203,16 +203,16 @@
                     </td>
                     <td style='vertical-align: middle;text-align: center;'>收票人</td>
                     <td style='vertical-align: middle;text-align: right;'>票据张数</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Bill_Count" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: right;'>票据号码</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>                
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Bill_Num" class="form-control"/></td>                
                   </tr>
                   <tr>
                     <td style='vertical-align: middle;text-align: right;'>出票人</td>
                     <td style='vertical-align: middle;text-align: right;'>用途</td>
                     <td colspan="3" style='vertical-align: middle;text-align: right;'>
                         <div class="form-group">
-                            <select name="Use" id="Use" class="form-control selectpicker">
+                            <select id="Use" class="form-control selectpicker">
                             <option value="==请选择==">==请选择==</option>		
                             </select>
                           </div>
@@ -227,7 +227,7 @@
                           </div>
                     </td>
                     <td style='vertical-align: middle;text-align: right;'>支付密码</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>                  
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Password" class="form-control"/></td>                  
                   </tr>                                                
         
               </tbody>
