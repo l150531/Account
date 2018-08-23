@@ -1,5 +1,9 @@
 $(function() {
     $('#click_event4').click(function(){
+        var Date_3=$("#BBRQ").val();
+        
+        //数据填充在table表中
+        $("#Date_3").text(Date_3);
         var Out_Name_3=$("#Out_Name").val();
         var In_Name_3=$("#In_Name").val();
         
