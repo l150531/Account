@@ -192,30 +192,46 @@ $(function() {
 
 
     $('#Use_Out_Delete').click(function(){
-        db.transaction(function(tx) {  
-            tx.executeSql(
-                "delete from Bill where Use=?",[$("#Use_Out").val()],
-                function() {
-                    alert('删除用途成功!');
-                },
-                function() {
-                    alert('删除用途失败!');
-            });                                         
-        });
+        var tmpuse=$("#Use_Out").val();
+        if(tmpuse.length<=22){
+            db.transaction(function(tx) {  
+                tx.executeSql(
+                    "delete from Bill where Use=?",[$("#Use_Out").val()],
+                    function() {
+                        alert('删除用途成功!');
+                    },
+                    function() {
+                        alert('删除用途失败!');
+                });                                         
+            });
+        }
+        else{
+            alert("用途最多可以输入22个字，输入字数已超上限，请重新输入！");
+            $("#Use_Out").val("");
+        }
+
     });
 
 
-    $('#Add_Info_Add').click(function(){  
-        db.transaction(function(tx) {  
-            tx.executeSql(
-                "insert into Bill (Add_Info) values(?)",[$("#Info_Add").val()],
-                function() {
-                    alert('添加附加信息成功!');
-                },
-                function() {
-                    alert('添加附加信息失败!');
-            });                                         
-        });
+    $('#Add_Info_Add').click(function(){ 
+        var tmplength=$("#Info_Add").val();
+        if(tmplength.length<=22){
+            db.transaction(function(tx) {  
+                tx.executeSql(
+                    "insert into Bill (Add_Info) values(?)",[$("#Info_Add").val()],
+                    function() {
+                        alert('添加附加信息成功!');
+                    },
+                    function() {
+                        alert('添加附加信息失败!');
+                });                                         
+            });
+        } 
+        else{
+            alert("附加信息最多可以输入22个字，输入字数已超上限，请重新输入！");
+            $("#Info_Add").val("");
+        }
+
     });
 
 

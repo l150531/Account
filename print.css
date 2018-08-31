@@ -1,0 +1,283 @@
+/*
+#Date_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+#Out_Name_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #In_Name_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #Out_Accounted_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #In_Accounted_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #Out_Bank_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #In_Bank_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #Money_complex_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #Money_Arab_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,10px);
+  }
+  #Bill_Type_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #Bill_Count_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #Bill_Num_3 {
+    position: relative;
+    left: 150px;
+    vertical-align:baseline;
+    transform: translate(0px,0px);
+  }
+  #Row_2 {
+    padding-top: 0px;
+    margin-top: 0px;
+  }		
+*/
+
+#Date_3 {
+  position: relative;
+  left: 190pt;
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}
+#Out_Name_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#In_Name_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Out_Accounted_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#In_Accounted_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Out_Bank_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#In_Bank_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Money_complex_3 {
+    font-size:20pt;
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Money_Arab_3 {
+    font-size:25pt;
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,25pt);
+}
+#Bill_Type_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Bill_Count_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Bill_Num_3 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Add_Info_3 {
+  position: relative;
+  left: 335pt;
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+  word-break:break-all;
+}
+#Use_3 {
+  position: relative;
+  left: 335pt;
+  vertical-align:baseline;
+  transform: translate(0pt,-50pt);
+  word-break:break-all;
+}
+
+
+
+
+
+
+
+
+
+
+#Teledate {
+  position: relative;
+  left: 190pt;
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}
+#Out_Name_4 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#In_Name_4 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Out_Accounted_4 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#In_Accounted_4 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Out_Bank_4 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#In_Bank_4 {
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Money_complex_4 {
+    font-size:20pt;
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,0pt);
+}
+#Money_Arab_4 {
+    font-size:25pt;
+    position: relative;
+    left: 190pt;
+    vertical-align:baseline;
+    transform: translate(0pt,25pt);
+}
+#Add_Info_4 {
+  position: relative;
+  left: 335pt;
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+  word-break:break-all;
+}
+#Use_4 {
+  position: relative;
+  left: 335pt;
+  vertical-align:baseline;
+  transform: translate(0pt,-50pt);
+  word-break:break-all;
+}
+#Out_Province_4 {
+  position: relative;
+  
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}
+#In_Province_4 {
+  position: relative;
+  
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}
+#Out_City_4 {
+  position: relative;
+  
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}
+#In_City_4 {
+  position: relative;
+ 
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}
+#Out_Area_4 {
+  position: relative;
+  
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}
+#In_Area_4 {
+  position: relative;
+  
+  vertical-align:baseline;
+  transform: translate(0pt,0pt);
+}

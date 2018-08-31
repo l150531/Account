@@ -11,10 +11,12 @@
 	<link href="css/bootstrap-select.min.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-  
+  <link href="print.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="printstyle.css" rel="stylesheet" type="text/css" media="print"/>  
+
 	<style type="text/css">
 		#hidden_event1{
-		  .STYLE1 {font-size: 12px}
+		  font-size: 12px;
 		}
 		#hidden_event2{
 		  display:none;
@@ -24,36 +26,30 @@
 		}
     #hidden_event4{
       display:none;
-		}
-		.tips { color:#f00; font-size:25px; }	
+    }	
+    #hidden_event5{
+      display:none;
+		}	
+    
     #bg{
       background-image:url(image/进账单.jpg);
-      background-size:1363px 968px;
+      background-size:1190px 540px;
       background-repeat:no-repeat;
-      
+      /*背景图字体和大小*/
+      font-family:"SimHei";
+      font-size:18pt;
     }	
-    #Out_Name_3 {
-      position: relative;
-      left: 200px;
-      line-height:40px
-    }
-    #Out_Accounted_3 {
-      position: relative;
-      left: 200px;
-    }
-    #high {
-      line-height:40px
-    }			
+    #bg2{
+      background-image:url(image/电汇单.jpg);
+      background-size:1190px 540px;
+      background-repeat:no-repeat;
+      /*背景图字体和大小*/
+      font-family:"SimHei";
+      font-size:18pt;
+    }	
+   		
 	</style>  
 
-<style media="print" type="text/css">
-    /*取消页眉和页脚*/
-     @("@")page 
-    {
-        size:  auto;   /* auto is the initial value */
-        margin: 0mm;  /* this affects the margin in the printer settings */
-    }  
-</style>
 </head>
 <body>
     <div id="app">
@@ -83,35 +79,80 @@
       <div id="hidden_event3">
         <Normal></Normal>
       </div>
+      <!--进账单打印预览-->
       <div id="hidden_event4">
         <div id="print">
-          <table id="bg" style="width:1646px; height:748px;">  
-            <tr>                            
+          <table id="bg" style="width:1190px; height:530px; padding:0pt; margin-top: 0pt;">  
+            <tr id="Row_1" style="padding:0pt; margin-top: 0pt; height:75pt;">                            
               <td id="Date_3"></td>                        
             </tr>                      
-            <tr>                            
+            <tr id="Row_2" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
                 <td id="Out_Name_3"></td><td id="In_Name_3"></td>                        
             </tr>                        
-            <tr>                            
+            <tr id="Row_3" style="padding:0pt; margin-top: 0pt; height:25pt;">                            
               <td id="Out_Accounted_3"></td><td id="In_Accounted_3"></td>                        
             </tr>                        
-            <tr>                            
+            <tr id="Row_4" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
               <td id="Out_Bank_3"></td><td id="In_Bank_3"></td>                        
             </tr>  
-            <tr>                            
+            <tr id="Row_5" style="padding:0pt; margin-top: 0pt; height:40pt;">                            
               <td id="Money_complex_3"></td><td id="Money_Arab_3"></td>                        
             </tr> 
-            <tr>                            
-              <td id="Bill_Type_3"></td><td id="Bill_Count_3"></td>                        
+            <tr id="Row_6" style="padding:0pt; margin-top: 0pt; height:20pt;"> 
+                <td id="Bill_Type_3"></td><td id="Bill_Count_3">                                                
             </tr> 
-            <tr>                            
-              <td id="Bill_Num_3"></td>                      
-            </tr>                   
+            <tr id="Row_7" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
+              <td id="Bill_Num_3"></td></td>                     
+            </tr> 
+            <tr id="Row_8" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
+              <td id="Use_3"></td>                     
+            </tr>
+            <tr id="Final_1" style="padding:0pt; margin-top: 0pt; height:187pt;">                            
+                <td id="Add_Info_3"></td>                   
+            </tr>                               
         </table> 
   
         </div>
       </div>      
        
+
+      <!--电汇单打印预览-->
+      <div id="hidden_event5">
+        <div id="print">
+          <table id="bg2" style="width:1190px; height:530px; padding:0pt; margin-top: 0pt;">  
+            <tr id="Row_8" style="padding:0pt; margin-top: 0pt; height:50pt;">                            
+              <td id="Type_Select"></td><td id="Date_4"></td>                        
+            </tr>                      
+            <tr id="Row_9" style="padding:0pt; margin-top: 0pt; height:23pt;">                            
+                <td id="Out_Name_4"></td><td id="In_Name_4"></td>                        
+            </tr>                        
+            <tr id="Row_10" style="padding:0pt; margin-top: 0pt; height:25pt;">                            
+              <td id="Out_Accounted_4"></td><td id="In_Accounted_4"></td>                        
+            </tr>                        
+            <tr id="Row_11" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
+              <td id="Out_Province_4"></td><td id="In_Province_4"></td>                       
+            </tr>
+            <tr id="Row_12" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
+              <td id="Out_Bank_4"></td><td id="In_Bank_4"></td>                        
+            </tr>  
+            <tr id="Row_13" style="padding:0pt; margin-top: 0pt; height:40pt;">                            
+              <td id="Money_complex_4"></td><td id="Money_Arab_4"></td>                        
+            </tr>      
+            </tr> 
+            <tr id="Row_14" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
+              <td id="Use_4"></td>                       
+            </tr>
+            <tr id="Final_2" style="padding:0pt; margin-top: 0pt; height:229pt;">                            
+              <td id="Add_Info_4"></td>                      
+            </tr>                               
+        </table> 
+        </div>
+      </div>
+
+
+
+
+
       <!--进账单组件，Bill组件的HTML代码要写在index.html中的HTML中-->
       <script type="text/x-template" id="Bill-Menu">        
         <div class="col-md-12 table-responsive">
@@ -208,7 +249,7 @@
                     <td>
                       <div class="form-group">
                         <select id="BillSpec" class="form-control selectpicker">
-                        <option selected="selected" values="==请选择==">==请选择==</option>
+                        <option selected="selected" values=""></option>
                         <option value="转账支票">转账支票</option>
                         <option value="银行汇票">银行汇票</option>
                         <option value="银行本票">银行本票</option>
@@ -228,7 +269,7 @@
                     <td colspan="3" style='vertical-align: middle;text-align: right;'>
                         <div class="form-group">
                             <select id="Use" class="form-control selectpicker">
-                            <option value="==请选择==">==请选择==</option>		
+                            <option value=""></option>		
                             </select>
                           </div>
                     </td>
@@ -237,7 +278,7 @@
                     <td style='vertical-align: middle;text-align: right;'>
                         <div class="form-group">
                             <select name="Add_Info" id="Add_Info" class="form-control selectpicker">
-                            <option value="==请选择==">==请选择==</option>		
+                            <option value=""></option>		
                             </select>
                           </div>
                     </td>
@@ -248,8 +289,8 @@
               </tbody>
               </tfoot>
                 <tr>
-                  <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" id="click_event4" value="打 印" /></td>
-                  <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet" value="打 印 设 置" /></td>                
+                  <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" id="click_event4" value="打印进账单" /></td>
+                  <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet" value="进账单打印设置" /></td>                
                 </tr> 
               </tfoot>
         </table>
@@ -262,18 +303,7 @@
         <table class="table table-striped table-bordered table-hover">
             <th colspan="22" style='vertical-align: middle;text-align: center;'><h3>普通电汇</h3>
             </th>
-            
-              <tr>
-                <th colspan="9" style='vertical-align: middle;text-align: right;'>委托日期:</th>
-                <th>
-                  <div class='input-group date' id='teledate'>  
-                    <input type="text" name="BBRQ" class="form-control" size="11" readonly> 
-                    <span class="input-group-addon">  
-                    <span class="glyphicon glyphicon-calendar"></span>  
-                    </span>  
-                    </div> 
-                </th> 
-              </tr> 
+          
               <tbody>
                   <tr>
                       <td colspan="10" style='vertical-align: middle;text-align: left;'>
@@ -287,8 +317,14 @@
                         </div>
                       </td>
                     
-                      <td colspan="4" style='vertical-align: middle;text-align: center;'>拼音缩写:</td>
-                      <td colspan="6" style='vertical-align: middle;text-align: left;'><input type="text" name="pinyin_in" class="form-control"/>
+                      <td colspan="4" style='vertical-align: middle;text-align: center;'>委托日期:</td>
+                      <td colspan="6" style='vertical-align: middle;text-align: left;'>
+                          <div class='input-group date' id='Teledate'>  
+                          <input type="text" name="Teledate" class="form-control" size="11" readonly> 
+                          <span class="input-group-addon">  
+                          <span class="glyphicon glyphicon-calendar"></span>  
+                          </span>  
+                          </div> 
                       </td>                                       
                   </tr>
                   <tr>
@@ -333,25 +369,25 @@
                   </tr>
                   <tr>
                    <!--<td style='vertical-align: middle;text-align: right;'>汇款人</td>-->
-                    <td style='vertical-align: middle;text-align: right;'>地点</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'>汇出地点</td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Out_Province" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: center;'>省</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Out_City" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: center;'>市/县</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="Out_Area" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: center;'>区</td>
                    
-                    <td style='vertical-align: middle;text-align: right;'>地点</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'>汇入地点</td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="In_Province" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: center;'>省</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="In_City" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: center;'>市/县</td>
-                    <td style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td style='vertical-align: middle;text-align: right;'><input type="text" id="In_Area" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: center;'>区</td>
                   </tr>
                   <tr>
                     <!--<td style='vertical-align: middle;text-align: right;'>汇款人</td>-->
-                    <td style='vertical-align: middle;text-align: right;'>银行</td>
+                    <td style='vertical-align: middle;text-align: right;'>汇出行名称</td>
                     <td colspan="6" style='vertical-align: middle;text-align: right;'>
                         <div class="form-group">
                             <select name="Out_Bank_2" id="Out_Bank_2" class="form-control selectpicker">
@@ -360,7 +396,7 @@
                           </div>
                     </td>
                     <!--td style='vertical-align: middle;text-align: center;'>收款人</td>-->
-                    <td style='vertical-align: middle;text-align: right;'>银行</td>
+                    <td style='vertical-align: middle;text-align: right;'>汇入行名称</td>
                     <td colspan="6" style='vertical-align: middle;text-align: right;'>
                         <div class="form-group">
                             <select name="In_Bank_2" id="In_Bank_2" class="form-control selectpicker">
@@ -372,14 +408,14 @@
                   <tr>
                     <!--<td style='vertical-align: middle;text-align: right;'>汇款人</td>-->
                     <td style='vertical-align: middle;text-align: right;'>金额</td>
-                    <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td colspan="3" style='vertical-align: middle;text-align: right;'><input type="text" id="Money_Arab_2" class="form-control"/></td>
                     <td style='vertical-align: middle;text-align: right;'>票据号码</td>
                     <td colspan="2">
                       <input type="text" name="pinyin_in" class="form-control"/>                 
                     </td>
                     <!--<td style='vertical-align: middle;text-align: center;'>收款人</td>-->
                     <td style='vertical-align: middle;text-align: right;'>支付密码</td>
-                    <td colspan="6" style='vertical-align: middle;text-align: right;'><input type="text" name="pinyin_in" class="form-control"/></td>
+                    <td colspan="6" style='vertical-align: middle;text-align: right;'><input type="text" id="Passport" class="form-control"/></td>
                   </tr>
                   <tr>
                    <!--<td style='vertical-align: middle;text-align: right;'>汇款人</td>-->
@@ -387,7 +423,7 @@
                     <td colspan="6" style='vertical-align: middle;text-align: right;'>
                         <div class="form-group">
                             <select name="Use_2" id="Use_2" class="form-control selectpicker">
-                            <option value="==请选择==">==请选择==</option>		
+                            <option value=""></option>		
                             </select>
                           </div>
                     </td>
@@ -396,7 +432,7 @@
                     <td colspan="6" style='vertical-align: middle;text-align: right;'>
                         <div class="form-group">
                             <select name="Add_Info_2" id="Add_Info_2" class="form-control selectpicker">
-                            <option value="==请选择==">==请选择==</option>		
+                            <option value=""></option>		
                             </select>
                           </div>
                     </td>
@@ -405,8 +441,8 @@
               </tbody>
               </tfoot>
                   <tr>
-                  <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" name="Submit" value="打 印" /></td>
-                  <td height='50' colspan="20" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" name="Submit" value="打 印 设 置" /></td>                
+                  <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" id="click_event5" value="打印电汇单" /></td>
+                  <td height='50' colspan="20" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet2" value="电汇单打印设置" /></td>                
                 </tr> 
               </tfoot>
         </table>
@@ -570,7 +606,7 @@ $(function() {
 				todayHighlight: 'true'	
 										
       });
-      $('#teledate').datetimepicker({				
+      $('#Teledate').datetimepicker({				
 				language:  'zh-CN',
 				autoclose: 1,
 				format:'yyyy-mm-dd',
@@ -579,9 +615,11 @@ $(function() {
 				todayBtn:'true',
 				showOnFocus: 'true',
 				keyboardNavigation:'true',
-				todayHighlight: 'true'	
-										
+				todayHighlight: 'true'							
       }); 
+      $(".selectpicker").selectpicker({				
+				liveSearch: true,							
+      });
       $('#click_event1').click(function(){
 		//if($('#hidden_event').is(':hidden')){
 		  if($("#hidden_event1").css("display")=="none"){
@@ -589,30 +627,9 @@ $(function() {
         $('#hidden_event2').hide();
         $('#hidden_event3').hide();
         $('#hidden_event4').hide();
+        $('#hidden_event5').hide();
       }
-      $.getsqldata();
-/*      
-      db.transaction(function(tx) {  
-            tx.executeSql(
-                "select All_Name_Out from Bill",[],
-                function(tx, result) {
-                  $("#Out_Name").empty();
-                    for (var i=0;i<result.rows.length;i++) {
-                        if(result.rows.item(i).All_Name_Out != null){
-                          $("#Out_Name.selectpicker").append("<option value='"+result.rows.item(i).All_Name_Out+"'>"+result.rows.item(i).All_Name_Out+"</option>");
-                        }
-                        else{
-
-                        }
-                      }
-                      $("#Out_Name").selectpicker('refresh');
-                },
-                function() {
-                    alert('删除附加信息失败!');
-            });                                         
-        });
-
-*/        
+      $.getsqldata();       
 		});
 		$('#click_event2').click(function(){
 		  if($("#hidden_event2").css("display")=="none"){
@@ -621,6 +638,7 @@ $(function() {
       $('#hidden_event1').hide();
       $('#hidden_event3').hide();
       $('#hidden_event4').hide();
+      $('#hidden_event5').hide();
       }
      
     });
@@ -631,6 +649,7 @@ $(function() {
       $('#hidden_event1').hide();
       $('#hidden_event2').hide();
       $('#hidden_event4').hide();
+      $('#hidden_event5').hide();
       }
       $.getsqldata();
     });    
@@ -641,56 +660,24 @@ $(function() {
       $('#hidden_event1').hide();
       $('#hidden_event2').hide();
       $('#hidden_event3').hide();
+      $('#hidden_event5').hide();
       }
       //$("#print").jqprint({});
       //$.getcssdata();
+    });
+    $('#click_event5').click(function(){
+		  if($("#hidden_event5").css("display")=="none"){
+		//if($('#hidden_event1').is(':hidden')){
+		  $('#hidden_event5').show();
+      $('#hidden_event1').hide();
+      $('#hidden_event2').hide();
+      $('#hidden_event3').hide();
+      $('#hidden_event4').hide();
+      }
+
     });  
-/*
-    db.transaction(function(tx) {      
-        tx.executeSql(
-            "create table IF not EXISTS Bill(id integer primary key autoincrement,All_Name_Out text,Accounted_Out text,Bank_out text,Use text,All_Name_In text,Accounted_In text,Bank_In text,Add_Info text)", [],
-            function(tx, result) {
-                console.log('创建出票人表成功');
-            },
-            function(tx, error) {
-                console.log('创建出票人表失败' + error.message);
-        });
 
-        
-        tx.executeSql(
-            "drop table Bill", [],
-            function(tx, result) {
-                console.log('删除表成功');
-            },
-            function(tx, error) {
-                console.log('删除表失败' + error.message);
-        });
-       
-    });
-*/     
-/*      
-    db.transaction(function(tx) {  
-        tx.executeSql(
-            "select All_Name_Out from Bill",[],
-            function(tx, result) {
-                for (var i=0;i<result.rows.length;i++) {
-                    if(result.rows.item(i).All_Name_Out != null){
-                      $("#Out_Name.selectpicker").append("<option value='"+result.rows.item(i).All_Name_Out+"'>"+result.rows.item(i).All_Name_Out+"</option>");
-                    }
-                    else{
 
-                    }
-                  }
-                  $("#Out_Name").selectpicker('refresh');
-            },
-            function() {
-                alert('删除附加信息失败!');
-        });                                         
-    });
-*/
-
-  
-     
 
 });      
 </script>

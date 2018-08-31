@@ -1,0 +1,251 @@
+/*
+打印机打印设置
+*/
+/*@media print里面的内容只对打印出来的内容有效，之外的内容就是屏幕显示的样式。*/
+@media print {
+    #bg {
+        background-image:url(image/进账单.jpg);
+        background-size:846px 417px;
+        background-repeat:no-repeat;
+        /*background-size:1190px 570px;*/
+
+        
+ /*       
+        width:550pt; 
+        height:230pt;
+ */
+        padding:0pt; 
+        margin-top: 0pt;
+        font-family:"SimHei";
+        font-size:10pt;
+    }   
+    #Date_3 {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Out_Name_3 {
+        position: relative;
+        left: 135pt;
+        width:280pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #In_Name_3 {
+        position: relative;
+        left: 122pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Out_Accounted_3 {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #In_Accounted_3 {
+        position: relative;
+        left: 122pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Out_Bank_3 {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #In_Bank_3 {
+        position: relative;
+        left: 122pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Money_complex_3 {
+        font-size:15pt;
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Money_Arab_3 {
+        font-size:20pt; 
+        position: relative;
+        left: 122pt;
+        vertical-align:baseline;
+        transform: translate(0pt,20pt);
+    }
+    #Bill_Type_3 {
+        position: relative;
+        left: 135pt;
+        width:200pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Bill_Count_3 {
+        position: relative;
+        left: 1pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Bill_Num_3 {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Add_Info_3 {
+        position: relative;
+        left: 335pt;
+        vertical-align:baseline;
+        transform: translate(0pt,-50pt);
+        word-break : break-all;
+    }
+    #Use_3 {
+        position: relative;
+        left: 335pt;
+        vertical-align:baseline;
+        transform: translate(0pt,-50pt);
+        word-break : break-all;
+    }
+
+    #bg2 {
+        background-image:url(image/电汇单.jpg);
+        background-size:846px 417px;
+        background-repeat:no-repeat;
+        /*background-size:1190px 570px;*/
+        padding:0pt; 
+        margin-top: 0pt;
+        font-family:"SimHei";
+        font-size:16pt;
+    }   
+    #Teledate {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Out_Name_4 {
+        position: relative;
+        left: 135pt;
+        width:200pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #In_Name_4 {
+        position: relative;
+        left: 192pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Out_Accounted_4 {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #In_Accounted_4 {
+        position: relative;
+        left: 192pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Out_Bank_4 {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #In_Bank_4 {
+        position: relative;
+        left: 182pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Money_complex_4 {
+        font-size:15pt;
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+    }
+    #Money_Arab_4 {
+        font-size:20pt; 
+        position: relative;
+        left: 235pt;
+        vertical-align:baseline;
+        transform: translate(0pt,15pt);
+    }
+    #Add_Info_4 {
+        position: relative;
+        left: 335pt;
+        vertical-align:baseline;
+        transform: translate(0pt,40pt);
+        word-break : break-all;
+        font-size:12pt;
+    }
+    #Use_4 {
+        position: relative;
+        left: 335pt;
+        vertical-align:baseline;
+        transform: translate(0pt,40pt);
+        word-break : break-all;
+        font-size:12pt;
+    }
+
+
+    #Out_Province_4 {
+        position: relative;
+        left: 135pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+        font-size:16pt;
+    }
+    #In_Province_4 {
+        position: relative;
+        left: 192pt;
+        vertical-align:baseline;
+        transform: translate(0pt,0pt);
+        font-size:16pt;
+    }
+
+
+
+
+
+/*
+    #Row_1 {
+ 
+        height:2pt;
+    }
+    #Row_2 {
+ 
+        height:30pt;
+    }
+    #Row_3 {
+ 
+        height:30pt;
+    } 
+    #Row_4 {
+ 
+        height:30pt;
+    }
+    #Row_5 {
+
+        height:55pt;
+    }
+    #Row_6 {
+ 
+        height:30pt;
+    } 
+    #Row_7 {
+ 
+        height:30pt;
+    } 
+    #Final_1 {
+ 
+        height:112pt;
+    } 
+*/    
+}

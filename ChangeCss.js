@@ -1,4 +1,5 @@
 $(function() {
+    //进账单数据填充到打印表中
     $('#click_event4').click(function(){
         var Date_3=$("#BBRQ").val();
         //数据填充在table表中
@@ -27,6 +28,8 @@ $(function() {
         
         var Use_3=$("#Use").val();
         var Add_Info_3=$("#Add_Info").val();
+        $("#Add_Info_3").text(Add_Info_3);
+        $("#Use_3").text(Use_3);
 
         var Bill_Num_3=$("#Bill_Num").val();
         var Bill_Count_3=$("#Bill_Count").val();
@@ -39,30 +42,97 @@ $(function() {
         $("#Bill_Type_3").text(Bill_Type_3);
         
         //转账金额转换为大写
-        $.Arabia_To_SimplifiedChinese(Money_Arab_3);
+        var Money_complex_3=$.Arabia_To_SimplifiedChinese(Money_Arab_3);
+        $("#Money_complex_3").text(Money_complex_3);
         Money_Arab_3 = "￥"+ Money_Arab_3;
         $("#Money_Arab_3").text(Money_Arab_3);
         
-        $("#print").jqprint({});
+        $("#bg").jqprint({
+        });
 
   }); 
     
-  //打印设置
+  //进账单打印设置
   $('#SubmitSet').click(function(){
    
     
     
     
   }); 
+
+    //电汇单数据打印
+    $('#click_event5').click(function(){
+        var box=$("#box").val();
+        var Date_4=$("#Teledate").val();
+        //数据填充在table表中
+        $("#Date_4").text(Date_4);
+        var Out_Name_4=$("#Out_Name_2").val();
+        var In_Name_4=$("#In_Name_2").val();
+        
+        //数据填充在table表中
+        $("#Out_Name_4").text(Out_Name_4);
+        $("#In_Name_4").text(In_Name_4);
+
+        var Out_Accounted_4=$("#Out_Accounted_2").val();
+        var In_Accounted_4=$("#In_Accounted_2").val();
+        $("#Out_Accounted_4").text(Out_Accounted_4);
+        $("#In_Accounted_4").text(In_Accounted_4);
+
+        var Out_Bank_4=$("#Out_Bank_2").val();
+        var In_Bank_4=$("#In_Bank_2").val();
+        $("#Out_Bank_4").text(Out_Bank_4);
+        $("#In_Bank_4").text(In_Bank_4);
+
+        var Out_Province_4=$("#Out_Province").val();
+        var In_Province_4=$("#In_Province").val();
+
+        var Out_City_4=$("#Out_City").val();
+        var In_City_4=$("#In_City").val();
+        
+        var Out_Area_4=$("#Out_Area").val();
+        var In_Area_4=$("#In_Area").val();
+
+        //空格转为&nbsp;
+        var tmp=' ';
+        tmp=tmp.replace(' ', '&nbsp;');
+        Out_Province_4= Out_Province_4+tmp+tmp+Out_City_4+tmp+tmp+tmp+tmp+tmp+tmp+Out_Area_4;
+        In_Province_4= In_Province_4+tmp+tmp+In_City_4+tmp+tmp+tmp+tmp+tmp+tmp+In_Area_4;
+    
+        //原样输出应使用html()方法，不能使用text()方法，使用text()方法多个空格会被合并为一个空格
+        $("#Out_Province_4").html(Out_Province_4);
+        $("#In_Province_4").html(In_Province_4);
+
+
+        var Use_4=$("#Use_2").val();
+        var Add_Info_4=$("#Add_Info_2").val();
+        $("#Use_4").text(Use_4);
+        $("#Add_Info_4").text(Add_Info_4);
+
+        var Money_Arab_4=$("#Money_Arab_2").val(); 
+        //转账金额转换为大写
+        //$.Arabia_To_SimplifiedChinese(Money_Arab_4);
+        var Money_complex_4=$.Arabia_To_SimplifiedChinese(Money_Arab_4);
+        $("#Money_complex_4").text(Money_complex_4);
+        Money_Arab_4 = "￥"+ Money_Arab_4;
+        $("#Money_Arab_4").text(Money_Arab_4);
+        
+        $("#bg2").jqprint({
+        });
+
+    });
+  //电汇单打印设置
+    $('#SubmitSet2').click(function(){
+    
+        
+        
+        
+    });
     
 });
 $.extend({Arabia_To_SimplifiedChinese:function(Num){
     //分割整数部分和小数部分，要判断小数部分是否为空
     var part=Num.split('.');    
-
-    
     var newchar = "";
-    
     //小数点前进行转化
     for (i = part[0].length - 1; i >= 0; i--) {
         if (part[0].length > 10) {
@@ -143,7 +213,8 @@ $.extend({Arabia_To_SimplifiedChinese:function(Num){
         newchar = newchar.replace("零零", "零");
         newchar = newchar.replace("零元", "元");      
     }
-    $("#Money_complex_3").text(newchar);
+    //$("#Money_complex_3").text(newchar);
+    return newchar;
 }
 });
     

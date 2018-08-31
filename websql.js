@@ -138,6 +138,7 @@ $(function() {
             "select Add_Info from Bill",[],
             function(tx, result) {
                 for (var i=0;i<result.rows.length;i++) {
+                    
                     if(result.rows.item(i).Add_Info != null){
                       $("#Add_Info.selectpicker").append("<option value='"+result.rows.item(i).Add_Info+"'>"+result.rows.item(i).Add_Info+"</option>");
                     }
