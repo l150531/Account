@@ -54,8 +54,8 @@ $(function() {
     
   //进账单打印设置
   $('#SubmitSet').click(function(){
-   
-    
+    //模态窗启动
+    $('#BillModal').modal('show');
     
     
   }); 
@@ -123,7 +123,7 @@ $(function() {
   //电汇单打印设置
     $('#SubmitSet2').click(function(){
     
-        
+        $('#myModal').modal('show');
         
         
     });

@@ -30,7 +30,12 @@
     #hidden_event5{
       display:none;
 		}	
-    
+    #hidden_event6{
+      display:none;
+    }
+    #hidden_event7{
+      display:none;
+		}
     #bg{
       background-image:url(image/进账单.jpg);
       background-size:1190px 540px;
@@ -151,6 +156,188 @@
 
 
 
+      <!--进账单模态窗-->
+      <div id="hidden_event6">
+        <!--模态窗口-->	
+        <form method="post" action="" class="form-horizontal" role="form" id="form_data" onSubmit="return check_form()">			
+          <div class="modal" id="BillModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4>资产入账</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <table class="table table-striped table-bordered table-hover">
+                      <tbody>
+ 
+                        <tr>	
+                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备类型：</td>
+                          <td width="33%"><input type="hidden" class="form-control" id="SBLX" readonly="readonly"></td>
+                          <tr>
+                          <td style='vertical-align: middle;text-align: right;'>设备品牌：</td>
+                          <td><input type="Hidden" class="form-control" id="SBPP" readonly></td>
+                          </tr>
+                          <tr>
+                          <td style='vertical-align: middle;text-align: right;'>设备型号：</td>
+                          <td><input type="Hidden" class="form-control" id="SBXH" readonly></td>
+                          </tr>
+                        <tr>
+                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备状态：</td>		
+                          <td width="73%" height="30">
+                          <input type="hidden" name='YZT' id='YZT' value={$data_info[0].SBZT}></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>所属机构：</td>
+                          <td height="30" colspan="2"><input type="hidden" name='YJG' id='YJG' value={$data_info[0].SSJG}> </td>
+                        </tr>	    	  
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>生产日期：</td>
+                          <td colspan="2" id="SCRQ">{$shebei[0].SCRQ}</td>
+                        </tr>
+                        
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>入账日期：</td>
+                          <td colspan="2"><input name="Account_Date" type="text" id="Account_Date" size="17" value="<?= date("Y-m-d H:i:s",time()) ?>" readonly="readonly"/></td>
+                        </tr>
+                        
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>序列号：</td>
+                          <td height="30" colspan="2"><input name="XULH" type="text" id="XULH" value="{$shebei[0].XULH}" size="35" readonly/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>资产编号：</td>
+                          <td height="30" colspan="2">
+                          <input name="Asset_Num" id="Asset_Num" type="text" value="{$depre[0].Asset_Num}" size="35"/></td>
+                        </tr>	  
+                        <tr>
+                          <td height="30" style='vertical-align: middle;text-align: right;'>备&nbsp;&nbsp;注：</td>
+                          <td height="30" colspan="2" align="left"><input type="text" name="BEIZHU" id="BEIZHU" value="{$shebei[0].Comment}" size="35" /></td>
+                        </tr> 
+                        <tr>
+                          <td height="30" style='vertical-align: middle;text-align: right;'>操作事项：</td>
+                          <td height="30" colspan="2" align="left"><input type="radio" name="CZLX" id="CZLX" value="入账" />入账 </td>
+                        </tr>
+                      </tbody>
+                      </table>
+                    </div>							
+                  </div>	
+                </div>
+                <div class="modal-footer" id="div1">
+                  <if condition="$flag eq 'TRUE' ">  
+                  <button type="submit" value="提交" class="btn btn-primary btn-sm save">
+                    提 交
+                  </button>	
+                  </if> 							
+                  <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+                    取 消 
+                  </button>								
+                </div>							
+              </div>
+            </div>
+          </div>
+        </form>		
+        <!--模态窗口-->							
+      </div>
+
+
+
+
+      <!--电汇单模态窗-->
+      <div id="hidden_event7">
+        <!--模态窗口-->	
+        <form method="post" action="" class="form-horizontal" role="form" id="form_data" onSubmit="return check_form()">			
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4>资产入账</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <table class="table table-striped table-bordered table-hover">
+                      <tbody>                        
+                        <tr>	
+                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备类型：</td>
+                          <td width="33%"><input type="hidden" class="form-control" id="SBLX" readonly="readonly"></td>
+                          <tr>
+                          <td style='vertical-align: middle;text-align: right;'>设备品牌：</td>
+                          <td><input type="Hidden" class="form-control" id="SBPP" readonly></td>
+                          </tr>
+                          <tr>
+                          <td style='vertical-align: middle;text-align: right;'>设备型号：</td>
+                          <td><input type="Hidden" class="form-control" id="SBXH" readonly></td>
+                          </tr>
+                        <tr>
+                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备状态：</td>		
+                          <td width="73%" height="30">
+                          <input type="hidden" name='YZT' id='YZT' value={$data_info[0].SBZT}></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>所属机构：</td>
+                          <td height="30" colspan="2"><input type="hidden" name='YJG' id='YJG' value={$data_info[0].SSJG}> </td>
+                        </tr>	    	  
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>生产日期：</td>
+                          <td colspan="2" id="SCRQ">{$shebei[0].SCRQ}</td>
+                        </tr>
+                        
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>入账日期：</td>
+                          <td colspan="2"><input name="Account_Date" type="text" id="Account_Date" size="17" value="<?= date("Y-m-d H:i:s",time()) ?>" readonly="readonly"/></td>
+                        </tr>
+                        
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>序列号：</td>
+                          <td height="30" colspan="2"><input name="XULH" type="text" id="XULH" value="{$shebei[0].XULH}" size="35" readonly/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>资产编号：</td>
+                          <td height="30" colspan="2">
+                          <input name="Asset_Num" id="Asset_Num" type="text" value="{$depre[0].Asset_Num}" size="35"/></td>
+                        </tr>	  
+                        <tr>
+                          <td height="30" style='vertical-align: middle;text-align: right;'>备&nbsp;&nbsp;注：</td>
+                          <td height="30" colspan="2" align="left"><input type="text" name="BEIZHU" id="BEIZHU" value="{$shebei[0].Comment}" size="35" /></td>
+                        </tr> 
+                        <tr>
+                          <td height="30" style='vertical-align: middle;text-align: right;'>操作事项：</td>
+                          <td height="30" colspan="2" align="left"><input type="radio" name="CZLX" id="CZLX" value="入账" />入账 </td>
+                        </tr>
+                      </tbody>
+                      </table>
+                    </div>							
+                  </div>	
+                </div>
+                <div class="modal-footer" id="div1">
+                  <if condition="$flag eq 'TRUE' ">  
+                  <button type="submit" value="提交" class="btn btn-primary btn-sm save">
+                    提 交
+                  </button>	
+                  </if> 							
+                  <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+                    取 消 
+                  </button>								
+                </div>							
+              </div>
+            </div>
+          </div>
+        </form>		
+        <!--模态窗口-->							
+
+
+
+
+
+      </div>
 
 
       <!--进账单组件，Bill组件的HTML代码要写在index.html中的HTML中-->
@@ -628,6 +815,8 @@ $(function() {
         $('#hidden_event3').hide();
         $('#hidden_event4').hide();
         $('#hidden_event5').hide();
+        $('#hidden_event6').hide();
+        $('#hidden_event7').hide();
       }
       $.getsqldata();       
 		});
@@ -639,6 +828,8 @@ $(function() {
       $('#hidden_event3').hide();
       $('#hidden_event4').hide();
       $('#hidden_event5').hide();
+      $('#hidden_event6').hide();
+      $('#hidden_event7').hide();
       }
      
     });
@@ -650,6 +841,8 @@ $(function() {
       $('#hidden_event2').hide();
       $('#hidden_event4').hide();
       $('#hidden_event5').hide();
+      $('#hidden_event6').hide();
+      $('#hidden_event7').hide(); 
       }
       $.getsqldata();
     });    
@@ -661,6 +854,8 @@ $(function() {
       $('#hidden_event2').hide();
       $('#hidden_event3').hide();
       $('#hidden_event5').hide();
+      $('#hidden_event6').hide();
+      $('#hidden_event7').hide();
       }
       //$("#print").jqprint({});
       //$.getcssdata();
@@ -673,10 +868,37 @@ $(function() {
       $('#hidden_event2').hide();
       $('#hidden_event3').hide();
       $('#hidden_event4').hide();
+      $('#hidden_event6').hide();
+      $('#hidden_event7').hide();
       }
 
     });  
+    $('#SubmitSet').click(function(){
+		  if($("#hidden_event6").css("display")=="none"){
+		//if($('#hidden_event1').is(':hidden')){
+		  $('#hidden_event5').hide();
+      $('#hidden_event1').hide();
+      $('#hidden_event2').hide();
+      $('#hidden_event3').hide();
+      $('#hidden_event4').hide();
+      $('#hidden_event6').show();
+      $('#hidden_event7').hide();
+      }
 
+    });
+    $('#SubmitSet2').click(function(){
+		  if($("#hidden_event7").css("display")=="none"){
+		//if($('#hidden_event1').is(':hidden')){
+		  $('#hidden_event7').show();
+      $('#hidden_event1').hide();
+      $('#hidden_event2').hide();
+      $('#hidden_event3').hide();
+      $('#hidden_event4').hide();
+      $('#hidden_event6').hide();
+      $('#hidden_event5').hide();
+      }
+
+    });
 
 
 });      
