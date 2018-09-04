@@ -70,7 +70,7 @@
       -->
       <center>
         <input name="button" type="button" id="click_event1" value="当前进账单/特转" class="btn btn-primary"/>
-        <input name="button" type="button" id="click_event3" value="普通电汇" class="btn btn-primary"/>      
+        <input name="button" type="button" id="click_event3" value="电汇凭证" class="btn btn-primary"/>      
         <input name="button" type="button" id="click_event2" value="单据参数设置" class="btn btn-primary"/>      
       </center>
     
@@ -114,9 +114,156 @@
             </tr>
             <tr id="Final_1" style="padding:0pt; margin-top: 0pt; height:187pt;">                            
                 <td id="Add_Info_3"></td>                   
-            </tr>                               
+            </tr> 
         </table> 
   
+
+
+        <table class="table table-striped table-bordered table-hover">
+          <tbody>                        
+            <tr>
+              <td width="20%" style='vertical-align: middle;text-align: center;'>打印项目</td>
+              <td width="16%" style='vertical-align: middle;text-align: center;'>距左端</td>
+              <td width="16%" style='vertical-align: middle;text-align: center;'>距上端</td>
+              <td width="16%" style='vertical-align: middle;text-align: center;'>间距</td>
+              <td width="16%" style='vertical-align: middle;text-align: center;'>字号</td>
+              <td width="16%" style='vertical-align: middle;text-align: center;'>字体</td>                        
+            </tr>  
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>凭证日期</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Date_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Date_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Date_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Date_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Date_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>出票人全称</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Out_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Out_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Out_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Out_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Out_Name_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>出票人账号</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Out_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Out_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Out_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Out_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Out_Accounted_3" value="" size="2"/></td>
+            </tr>	  
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>出票人开户银行</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Out_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Out_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Out_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Out_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Out_Bank_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>收款人全称</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_In_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_In_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_In_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_In_Name_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_In_Name_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>收款人账号</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_In_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_In_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_In_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_In_Accounted_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_In_Accounted_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>收款人开户银行</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_In_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_In_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_In_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_In_Bank_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_In_Bank_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>大写金额</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Money_complex_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Money_complex_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Money_complex_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Money_complex_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Money_complex_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>小写金额</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Money_Arab_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Money_Arab_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Money_Arab_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Money_Arab_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Money_Arab_3" value="" size="2"/></td>
+            </tr> 
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>票据种类</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Bill_Type_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Bill_Type_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Bill_Type_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Bill_Type_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Bill_Type_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>票据张数</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Bill_Count_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Bill_Count_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Bill_Count_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Bill_Count_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Bill_Count_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>票据号码</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Bill_Num_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Bill_Num_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Bill_Num_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Bill_Num_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Bill_Num_3" value="" size="2"/></td>
+            </tr>
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>用途</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Add_Info_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Add_Info_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Add_Info_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Add_Info_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Add_Info_3" value="" size="2"/></td>
+            </tr>    
+            <tr>
+              <td style='vertical-align: middle;text-align: right;'>附加信息</td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Use_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Use_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Use_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Use_3" value="" size="2"/></td>
+              <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Use_3" value="" size="2"/></td>
+            </tr>  
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>
+                <button type="submit" value="提交" class="btn btn-primary btn-sm save" id="Bill_Confirm">
+                    提 交
+                  </button>	
+                  </if> 							
+                  <button type="submit" class="btn btn-default btn-sm" id="Bill_Cancel" data-dismiss="modal">
+                    取 消 
+                  </button>	
+              </td>
+            </tr>
+            <tr>
+              <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet" value="进账单打印设置" /></td>     
+            </tr>             
+          </tfoot>
+          </table>
+
+
+
+
+
         </div>
       </div>      
        
@@ -151,179 +298,313 @@
               <td id="Add_Info_4"></td>                      
             </tr>                               
         </table> 
+
+
+
+
+        <table class="table table-striped table-bordered table-hover">
+            <tbody>
+              <tr>
+                <td width="20%" style='vertical-align: middle;text-align: center;'>打印项目</td>
+                <td width="16%" style='vertical-align: middle;text-align: center;'>距左端</td>
+                <td width="16%" style='vertical-align: middle;text-align: center;'>距上端</td>
+                <td width="16%" style='vertical-align: middle;text-align: center;'>间距</td>
+                <td width="16%" style='vertical-align: middle;text-align: center;'>字号</td>
+                <td width="16%" style='vertical-align: middle;text-align: center;'>字体</td>                        
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>普通标记</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>                        
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>加急标记</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>   
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>委托日期</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>     
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>汇款人全称</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>汇款人账号</td>
+                <td style='vertical-align: middle;text-align: center;'><input id="Asset_Num" type="text" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>	
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>汇款人汇出地点</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>  
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>汇出行名称</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>收款人全称</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>收款人账号</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>收款人汇入地点</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>汇入行名称</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>大写金额</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>小写金额</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr> 
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>用途</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>    
+              <tr>
+                <td style='vertical-align: middle;text-align: right;'>附加信息</td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>
+                  <button type="submit" value="提交" class="btn btn-primary btn-sm save" id="Confirm">
+                      提 交
+                    </button>	
+                    </if> 							
+                    <button type="submit" class="btn btn-default btn-sm" id="Cancel" data-dismiss="modal">
+                      取 消 
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                  <td height='50' colspan="20" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet2" value="电汇单打印设置" /></td>                
+              </tr>             
+            </tfoot>
+    
+            </table>
+
+
         </div>
       </div>
 
 
 
       <!--进账单模态窗-->
+       <!--
       <div id="hidden_event6">
-        <!--模态窗口-->	
-        <form method="post" action="" class="form-horizontal" role="form" id="form_data" onSubmit="return check_form()">			
+       
+        <form method="post" action="" class="form-horizontal" role="form" id="form_data" onSubmit="return check_form_Bill()">			
           <div class="modal" id="BillModal">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h4>资产入账</h4>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <table class="table table-striped table-bordered table-hover">
-                      <tbody>
  
-                        <tr>	
-                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备类型：</td>
-                          <td width="33%"><input type="hidden" class="form-control" id="SBLX" readonly="readonly"></td>
-                          <tr>
-                          <td style='vertical-align: middle;text-align: right;'>设备品牌：</td>
-                          <td><input type="Hidden" class="form-control" id="SBPP" readonly></td>
-                          </tr>
-                          <tr>
-                          <td style='vertical-align: middle;text-align: right;'>设备型号：</td>
-                          <td><input type="Hidden" class="form-control" id="SBXH" readonly></td>
-                          </tr>
-                        <tr>
-                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备状态：</td>		
-                          <td width="73%" height="30">
-                          <input type="hidden" name='YZT' id='YZT' value={$data_info[0].SBZT}></td>
-                        </tr>
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>所属机构：</td>
-                          <td height="30" colspan="2"><input type="hidden" name='YJG' id='YJG' value={$data_info[0].SSJG}> </td>
-                        </tr>	    	  
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>生产日期：</td>
-                          <td colspan="2" id="SCRQ">{$shebei[0].SCRQ}</td>
-                        </tr>
-                        
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>入账日期：</td>
-                          <td colspan="2"><input name="Account_Date" type="text" id="Account_Date" size="17" value="<?= date("Y-m-d H:i:s",time()) ?>" readonly="readonly"/></td>
-                        </tr>
-                        
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>序列号：</td>
-                          <td height="30" colspan="2"><input name="XULH" type="text" id="XULH" value="{$shebei[0].XULH}" size="35" readonly/></td>
-                        </tr>
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>资产编号：</td>
-                          <td height="30" colspan="2">
-                          <input name="Asset_Num" id="Asset_Num" type="text" value="{$depre[0].Asset_Num}" size="35"/></td>
-                        </tr>	  
-                        <tr>
-                          <td height="30" style='vertical-align: middle;text-align: right;'>备&nbsp;&nbsp;注：</td>
-                          <td height="30" colspan="2" align="left"><input type="text" name="BEIZHU" id="BEIZHU" value="{$shebei[0].Comment}" size="35" /></td>
-                        </tr> 
-                        <tr>
-                          <td height="30" style='vertical-align: middle;text-align: right;'>操作事项：</td>
-                          <td height="30" colspan="2" align="left"><input type="radio" name="CZLX" id="CZLX" value="入账" />入账 </td>
-                        </tr>
-                      </tbody>
-                      </table>
-                    </div>							
-                  </div>	
-                </div>
-                <div class="modal-footer" id="div1">
-                  <if condition="$flag eq 'TRUE' ">  
-                  <button type="submit" value="提交" class="btn btn-primary btn-sm save">
-                    提 交
-                  </button>	
-                  </if> 							
-                  <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
-                    取 消 
-                  </button>								
-                </div>							
-              </div>
-            </div>
-          </div>
-        </form>		
-        <!--模态窗口-->							
-      </div>
-
-
-
-
-      <!--电汇单模态窗-->
-      <div id="hidden_event7">
-        <!--模态窗口-->	
-        <form method="post" action="" class="form-horizontal" role="form" id="form_data" onSubmit="return check_form()">			
-          <div class="modal" id="myModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h4>资产入账</h4>
+                  <h4><center>进账单参数设置</center></h4>
                 </div>
                 <div class="modal-body">
                   <div class="container-fluid">
                     <div class="row">
                       <table class="table table-striped table-bordered table-hover">
                       <tbody>                        
-                        <tr>	
-                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备类型：</td>
-                          <td width="33%"><input type="hidden" class="form-control" id="SBLX" readonly="readonly"></td>
-                          <tr>
-                          <td style='vertical-align: middle;text-align: right;'>设备品牌：</td>
-                          <td><input type="Hidden" class="form-control" id="SBPP" readonly></td>
-                          </tr>
-                          <tr>
-                          <td style='vertical-align: middle;text-align: right;'>设备型号：</td>
-                          <td><input type="Hidden" class="form-control" id="SBXH" readonly></td>
-                          </tr>
                         <tr>
-                          <td width="27%" style='vertical-align: middle;text-align: right;'>设备状态：</td>		
-                          <td width="73%" height="30">
-                          <input type="hidden" name='YZT' id='YZT' value={$data_info[0].SBZT}></td>
+                          <td width="20%" style='vertical-align: middle;text-align: center;'>打印项目</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>距左端</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>距上端</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>间距</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>字号</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>字体</td>                        
+                        </tr>  
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>凭证日期</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Date_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Date_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Date_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Date_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Date_3" value="" size="2"/></td>
                         </tr>
                         <tr>
-                          <td style='vertical-align: middle;text-align: right;'>所属机构：</td>
-                          <td height="30" colspan="2"><input type="hidden" name='YJG' id='YJG' value={$data_info[0].SSJG}> </td>
-                        </tr>	    	  
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>生产日期：</td>
-                          <td colspan="2" id="SCRQ">{$shebei[0].SCRQ}</td>
-                        </tr>
-                        
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>入账日期：</td>
-                          <td colspan="2"><input name="Account_Date" type="text" id="Account_Date" size="17" value="<?= date("Y-m-d H:i:s",time()) ?>" readonly="readonly"/></td>
-                        </tr>
-                        
-                        <tr>
-                          <td style='vertical-align: middle;text-align: right;'>序列号：</td>
-                          <td height="30" colspan="2"><input name="XULH" type="text" id="XULH" value="{$shebei[0].XULH}" size="35" readonly/></td>
+                          <td style='vertical-align: middle;text-align: right;'>出票人全称</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Out_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Out_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Out_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Out_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Out_Name_3" value="" size="2"/></td>
                         </tr>
                         <tr>
-                          <td style='vertical-align: middle;text-align: right;'>资产编号：</td>
-                          <td height="30" colspan="2">
-                          <input name="Asset_Num" id="Asset_Num" type="text" value="{$depre[0].Asset_Num}" size="35"/></td>
+                          <td style='vertical-align: middle;text-align: right;'>出票人账号</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Out_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Out_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Out_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Out_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Out_Accounted_3" value="" size="2"/></td>
                         </tr>	  
                         <tr>
-                          <td height="30" style='vertical-align: middle;text-align: right;'>备&nbsp;&nbsp;注：</td>
-                          <td height="30" colspan="2" align="left"><input type="text" name="BEIZHU" id="BEIZHU" value="{$shebei[0].Comment}" size="35" /></td>
+                          <td style='vertical-align: middle;text-align: right;'>出票人开户银行</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Out_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Out_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Out_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Out_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Out_Bank_3" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>收款人全称</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_In_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_In_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_In_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_In_Name_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_In_Name_3" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>收款人账号</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_In_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_In_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_In_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_In_Accounted_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_In_Accounted_3" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>收款人开户银行</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_In_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_In_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_In_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_In_Bank_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_In_Bank_3" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>大写金额</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Money_complex_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Money_complex_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Money_complex_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Money_complex_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Money_complex_3" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>小写金额</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Money_Arab_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Money_Arab_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Money_Arab_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Money_Arab_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Money_Arab_3" value="" size="2"/></td>
                         </tr> 
                         <tr>
-                          <td height="30" style='vertical-align: middle;text-align: right;'>操作事项：</td>
-                          <td height="30" colspan="2" align="left"><input type="radio" name="CZLX" id="CZLX" value="入账" />入账 </td>
+                          <td style='vertical-align: middle;text-align: right;'>票据种类</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Bill_Type_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Bill_Type_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Bill_Type_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Bill_Type_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Bill_Type_3" value="" size="2"/></td>
                         </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>票据张数</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Bill_Count_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Bill_Count_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Bill_Count_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Bill_Count_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Bill_Count_3" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>票据号码</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Bill_Num_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Bill_Num_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Bill_Num_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Bill_Num_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Bill_Num_3" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>用途</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Add_Info_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Add_Info_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Add_Info_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Add_Info_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Add_Info_3" value="" size="2"/></td>
+                        </tr>    
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>附加信息</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Use_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Use_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Use_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Use_3" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Use_3" value="" size="2"/></td>
+                        </tr>  
                       </tbody>
                       </table>
                     </div>							
                   </div>	
                 </div>
-                <div class="modal-footer" id="div1">
-                  <if condition="$flag eq 'TRUE' ">  
-                  <button type="submit" value="提交" class="btn btn-primary btn-sm save">
+                <div class="modal-footer" id="div1"> 
+                  <button type="submit" value="提交" class="btn btn-primary btn-sm save" id="Bill_Confirm">
                     提 交
-                  </button>	
-                  </if> 							
-                  <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+                  </button>								
+                  <button type="submit" class="btn btn-default btn-sm" id="Bill_Cancel" data-dismiss="modal">
                     取 消 
                   </button>								
                 </div>							
@@ -331,14 +612,176 @@
             </div>
           </div>
         </form>		
-        <!--模态窗口-->							
-
-
-
-
-
+      							
       </div>
 
+
+
+
+
+      <div id="hidden_event7">
+	
+       <form method="post" action="" class="form-horizontal" role="form" id="form_data" onSubmit="return check_form()">			
+          <div class="modal" id="MyModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+ 
+                  <h4><center>电汇单参数设置</center></h4>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <table class="table table-striped table-bordered table-hover">
+                      <tbody>
+                        <tr>
+                          <td width="20%" style='vertical-align: middle;text-align: center;'>打印项目</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>距左端</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>距上端</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>间距</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>字号</td>
+                          <td width="16%" style='vertical-align: middle;text-align: center;'>字体</td>                        
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>普通标记</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>                        
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>加急标记</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>   
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>委托日期</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>     
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>汇款人全称</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>汇款人账号</td>
+                          <td style='vertical-align: middle;text-align: center;'><input id="Asset_Num" type="text" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>	
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>汇款人汇出地点</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>  
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>汇出行名称</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>收款人全称</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>收款人账号</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>收款人汇入地点</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>汇入行名称</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>大写金额</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>小写金额</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr> 
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>用途</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>    
+                        <tr>
+                          <td style='vertical-align: middle;text-align: right;'>附加信息</td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                          <td style='vertical-align: middle;text-align: center;'><input type="text" id="XULH" value="" size="2"/></td>
+                        </tr>
+                      </tbody>
+                      </table>
+                    </div>							
+                  </div>	
+                </div>
+                <div class="modal-footer" id="div1"> 
+                  <button type="submit" value="提交" class="btn btn-primary btn-sm save" id="Confirm">
+                    提 交
+                  </button>	
+                  <button type="submit" class="btn btn-default btn-sm" id="Cancel" data-dismiss="modal">
+                    取 消 
+                  </button>								
+                </div>							
+              </div>
+            </div>
+          </div>
+        </form>		
+    
+      </div>
+    -->
 
       <!--进账单组件，Bill组件的HTML代码要写在index.html中的HTML中-->
       <script type="text/x-template" id="Bill-Menu">        
@@ -351,7 +794,7 @@
                 <th colspan="5" style='vertical-align: middle;text-align: right;'>日期:</th>
                 <th>
                   <div class='input-group date'>  
-                    <input type="text" id="BBRQ" class="form-control" size="11" readonly> 
+                    <input type="text" id="BBRQ" class="form-control" size="11"> 
                     <span class="input-group-addon">  
                     <span class="glyphicon glyphicon-calendar"></span>  
                     </span>  
@@ -477,7 +920,7 @@
               </tfoot>
                 <tr>
                   <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" id="click_event4" value="打印进账单" /></td>
-                  <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet" value="进账单打印设置" /></td>                
+                  <!--<td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet" value="进账单打印设置" /></td>-->     
                 </tr> 
               </tfoot>
         </table>
@@ -488,7 +931,7 @@
       <script type="text/x-template" id="Normal-Menu">        
         <div class="col-md-12 table-responsive">
         <table class="table table-striped table-bordered table-hover">
-            <th colspan="22" style='vertical-align: middle;text-align: center;'><h3>普通电汇</h3>
+            <th colspan="22" style='vertical-align: middle;text-align: center;'><h3>电汇凭证</h3>
             </th>
           
               <tbody>
@@ -507,7 +950,7 @@
                       <td colspan="4" style='vertical-align: middle;text-align: center;'>委托日期:</td>
                       <td colspan="6" style='vertical-align: middle;text-align: left;'>
                           <div class='input-group date' id='Teledate'>  
-                          <input type="text" name="Teledate" class="form-control" size="11" readonly> 
+                          <input type="text" name="Teledate" class="form-control" size="11"> 
                           <span class="input-group-addon">  
                           <span class="glyphicon glyphicon-calendar"></span>  
                           </span>  
@@ -629,7 +1072,7 @@
               </tfoot>
                   <tr>
                   <td height='50' style='vertical-align: middle;text-align: left;'><input type="submit" class="btn btn-primary" id="click_event5" value="打印电汇单" /></td>
-                  <td height='50' colspan="20" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet2" value="电汇单打印设置" /></td>                
+                  <!--<td height='50' colspan="20" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet2" value="电汇单打印设置" /></td> -->               
                 </tr> 
               </tfoot>
         </table>
@@ -872,7 +1315,8 @@ $(function() {
       $('#hidden_event7').hide();
       }
 
-    });  
+    });
+/*      
     $('#SubmitSet').click(function(){
 		  if($("#hidden_event6").css("display")=="none"){
 		//if($('#hidden_event1').is(':hidden')){
@@ -886,6 +1330,20 @@ $(function() {
       }
 
     });
+*/    
+    $('#SubmitSet').click(function(){
+		  if($("#hidden_event4").css("display")=="none"){
+		//if($('#hidden_event1').is(':hidden')){
+		  $('#hidden_event5').hide();
+      $('#hidden_event1').hide();
+      $('#hidden_event2').hide();
+      $('#hidden_event3').hide();
+      $('#hidden_event4').show();
+      $('#hidden_event6').hide();
+      $('#hidden_event7').hide();
+      }
+
+    });    
     $('#SubmitSet2').click(function(){
 		  if($("#hidden_event7").css("display")=="none"){
 		//if($('#hidden_event1').is(':hidden')){
@@ -899,9 +1357,44 @@ $(function() {
       }
 
     });
+    
+    //进账单取消打印设置
+    $('#Bill_Cancel').click(function(){
+      $('#hidden_event1').show();
+      $('#hidden_event6').hide();
+    });
+    //进账单打印参数设置
+    $('#Bill_Confirm').click(function(){
+      
+      var tmp=$('#Left_Out_Name_3').val();
+      tmp=parseFloat(tmp);
+      tmp += 135;
+
+      
+      //$("#Out_Name_3").css("left","235");
+      $("#Out_Name_3").css('cssText',"left:"+tmp+"pt!important");//提高权限
+      //alert($("#Out_Name_3").css("left"));//读取值(一个参数)
+      //设置断点
+      //debugger;
+/*
+      var style = document.createElement('style');
+      style.innerHTML = "@media print {#Out_Name_3 {position: relative;left: 235pt;}}";
+      window.document.head.appendChild(style); 
+*/
+    });
+    //电汇单取消打印参数设置
+    $('#Cancel').click(function(){
+      $('#hidden_event3').show();
+      $('#hidden_event7').hide();
+
+    });
 
 
-});      
+
+}); 
+
+
+    
 </script>
 
 </body>

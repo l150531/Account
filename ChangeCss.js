@@ -46,17 +46,18 @@ $(function() {
         $("#Money_complex_3").text(Money_complex_3);
         Money_Arab_3 = "￥"+ Money_Arab_3;
         $("#Money_Arab_3").text(Money_Arab_3);
-        
+    /*      
         $("#bg").jqprint({
         });
-
+    */
   }); 
     
   //进账单打印设置
   $('#SubmitSet').click(function(){
     //模态窗启动
-    $('#BillModal').modal('show');
-    
+    //$('#BillModal').modal('show');
+    //$('#BillModal').modal({backdrop:'static'}); //只能点击模态窗的提交和取消按钮取消模态窗显示
+    $("#bg").jqprint({});
     
   }); 
 
@@ -120,12 +121,398 @@ $(function() {
         });
 
     });
-  //电汇单打印设置
+    //电汇单打印设置
     $('#SubmitSet2').click(function(){
-    
-        $('#myModal').modal('show');
+        $('#MyModal').modal({backdrop:'static'}); //只能点击模态窗的提交和取消按钮取消模态窗显示
+    });
+
+
+
+    //进账单打印参数设置
+    $('#Bill_Confirm').click(function(){
+        //设置断点
+        //debugger;
+        /*
+        var style = document.createElement('style');
+        style.innerHTML = "@media print {#Out_Name_3 {position: relative;left: 235pt;}}";
+        window.document.head.appendChild(style); 
+        */
+        var Out_Name_tmp=$('#Left_Out_Name_3').val();
+        Out_Name_tmp=parseFloat(Out_Name_tmp);
+        Out_Name_tmp += 135;
+        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
+        
+        var Date_tmp=$('#Left_Date_3').val();
+        Date_tmp=parseFloat(Date_tmp);
+        Date_tmp += 135;
+        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
+
+        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
+        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+        Out_Accounted_tmp += 135;
+        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+        Out_Bank_tmp += 135;
+        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        In_Name_tmp=parseFloat(In_Name_tmp);
+        In_Name_tmp += 122;
+        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+        In_Accounted_tmp += 122;
+        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        In_Bank_tmp=parseFloat(In_Bank_tmp);
+        In_Bank_tmp += 122;
+        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        Money_complex_tmp=parseFloat(Money_complex_tmp);
+        Money_complex_tmp += 135;
+        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+        Money_Arab_tmp += 122;
+        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+        Bill_Type_tmp += 135;
+        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+        Bill_Count_tmp += 1;
+        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+        Bill_Num_tmp += 135;
+        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        Add_Info_tmp=parseFloat(Add_Info_tmp);
+        Add_Info_tmp += 335;
+        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        Use_tmp=parseFloat(Use_tmp);
+        Use_tmp += 335;
+        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var Out_Name_tmp=$('#Left_Out_Name_3').val();
+        Out_Name_tmp=parseFloat(Out_Name_tmp);
+        Out_Name_tmp += 135;
+        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
+        
+        var Date_tmp=$('#Left_Date_3').val();
+        Date_tmp=parseFloat(Date_tmp);
+        Date_tmp += 135;
+        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
+
+        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
+        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+        Out_Accounted_tmp += 135;
+        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+        Out_Bank_tmp += 135;
+        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        In_Name_tmp=parseFloat(In_Name_tmp);
+        In_Name_tmp += 135;
+        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+        In_Accounted_tmp += 135;
+        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        In_Bank_tmp=parseFloat(In_Bank_tmp);
+        In_Bank_tmp += 135;
+        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        Money_complex_tmp=parseFloat(Money_complex_tmp);
+        Money_complex_tmp += 135;
+        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+        Money_Arab_tmp += 135;
+        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+        Bill_Type_tmp += 135;
+        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+        Bill_Count_tmp += 135;
+        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+        Bill_Num_tmp += 135;
+        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        Add_Info_tmp=parseFloat(Add_Info_tmp);
+        Add_Info_tmp += 135;
+        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        Use_tmp=parseFloat(Use_tmp);
+        Use_tmp += 135;
+        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
         
         
+        var Out_Name_tmp=$('#Left_Out_Name_3').val();
+        Out_Name_tmp=parseFloat(Out_Name_tmp);
+        Out_Name_tmp += 135;
+        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
+        
+        var Date_tmp=$('#Left_Date_3').val();
+        Date_tmp=parseFloat(Date_tmp);
+        Date_tmp += 135;
+        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
+
+        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
+        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+        Out_Accounted_tmp += 135;
+        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+        Out_Bank_tmp += 135;
+        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        In_Name_tmp=parseFloat(In_Name_tmp);
+        In_Name_tmp += 135;
+        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+        In_Accounted_tmp += 135;
+        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        In_Bank_tmp=parseFloat(In_Bank_tmp);
+        In_Bank_tmp += 135;
+        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        Money_complex_tmp=parseFloat(Money_complex_tmp);
+        Money_complex_tmp += 135;
+        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+        Money_Arab_tmp += 135;
+        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+        Bill_Type_tmp += 135;
+        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+        Bill_Count_tmp += 135;
+        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+        Bill_Num_tmp += 135;
+        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        Add_Info_tmp=parseFloat(Add_Info_tmp);
+        Add_Info_tmp += 135;
+        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        Use_tmp=parseFloat(Use_tmp);
+        Use_tmp += 135;
+        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+
+
+        var Out_Name_tmp=$('#Left_Out_Name_3').val();
+        Out_Name_tmp=parseFloat(Out_Name_tmp);
+        Out_Name_tmp += 135;
+        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
+        
+        var Date_tmp=$('#Left_Date_3').val();
+        Date_tmp=parseFloat(Date_tmp);
+        Date_tmp += 135;
+        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
+
+        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
+        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+        Out_Accounted_tmp += 135;
+        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+        Out_Bank_tmp += 135;
+        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        In_Name_tmp=parseFloat(In_Name_tmp);
+        In_Name_tmp += 135;
+        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+        In_Accounted_tmp += 135;
+        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        In_Bank_tmp=parseFloat(In_Bank_tmp);
+        In_Bank_tmp += 135;
+        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        Money_complex_tmp=parseFloat(Money_complex_tmp);
+        Money_complex_tmp += 135;
+        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+        Money_Arab_tmp += 135;
+        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+        Bill_Type_tmp += 135;
+        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+        Bill_Count_tmp += 135;
+        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+        Bill_Num_tmp += 135;
+        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        Add_Info_tmp=parseFloat(Add_Info_tmp);
+        Add_Info_tmp += 135;
+        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        Use_tmp=parseFloat(Use_tmp);
+        Use_tmp += 135;
+        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+
+
+        var Out_Name_tmp=$('#Left_Out_Name_3').val();
+        Out_Name_tmp=parseFloat(Out_Name_tmp);
+        Out_Name_tmp += 135;
+        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
+        
+        var Date_tmp=$('#Left_Date_3').val();
+        Date_tmp=parseFloat(Date_tmp);
+        Date_tmp += 135;
+        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
+
+        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
+        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+        Out_Accounted_tmp += 135;
+        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+        Out_Bank_tmp += 135;
+        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        In_Name_tmp=parseFloat(In_Name_tmp);
+        In_Name_tmp += 135;
+        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+        In_Accounted_tmp += 135;
+        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        In_Bank_tmp=parseFloat(In_Bank_tmp);
+        In_Bank_tmp += 135;
+        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        Money_complex_tmp=parseFloat(Money_complex_tmp);
+        Money_complex_tmp += 135;
+        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+        Money_Arab_tmp += 135;
+        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+        Bill_Type_tmp += 135;
+        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+        Bill_Count_tmp += 135;
+        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+        Bill_Num_tmp += 135;
+        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        Add_Info_tmp=parseFloat(Add_Info_tmp);
+        Add_Info_tmp += 135;
+        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        Use_tmp=parseFloat(Use_tmp);
+        Use_tmp += 135;
+        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+
+
+    });
+
+
+    //电汇单打印参数设置
+    $('#Confirm').click(function(){
+
+
+
     });
     
 });
