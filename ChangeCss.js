@@ -1348,6 +1348,731 @@ $(function() {
     //电汇单打印参数设置
     $('#Confirm').click(function(){
 
+        var Out_Name_tmp='';
+        var Out_Name_tmp_1=$('#Left_Out_Name_4').val();
+        var Out_Name_tmp_2=$('#Up_Out_Name_4').val();
+        var Out_Name_tmp_3=$('#Spacing_Out_Name_4').val();
+        var Out_Name_tmp_4=$('#Size_Out_Name_4').val();
+        var Out_Name_tmp_5=$('#Font_Out_Name_4').val();
+
+        if(Out_Name_tmp_1 != ''){
+            Out_Name_tmp_1=parseFloat(Out_Name_tmp_1);
+            Out_Name_tmp_1 += 135;
+            Out_Name_tmp_1 ="left:"+Out_Name_tmp_1+'pt !important;';
+            Out_Name_tmp+=Out_Name_tmp_1;
+        }
+        if(Out_Name_tmp_2 !=''){
+            Out_Name_tmp_2=parseFloat(Out_Name_tmp_2);
+
+            Out_Name_tmp_2 ="transform:translate(0pt,"+Out_Name_tmp_2+'pt) !important;';
+            Out_Name_tmp+=Out_Name_tmp_2;
+        }
+        if(Out_Name_tmp_3 != ''){
+            Out_Name_tmp_3=parseFloat(Out_Name_tmp_3);
+
+            Out_Name_tmp_3 ="letter-spacing:"+Out_Name_tmp_3+'pt !important;';
+            Out_Name_tmp+=Out_Name_tmp_3;
+
+        }
+        if(Out_Name_tmp_4 !=''){
+            Out_Name_tmp_4=parseFloat(Out_Name_tmp_4);
+
+            Out_Name_tmp_4 ="font-size:"+Out_Name_tmp_4+'pt !important;';
+            Out_Name_tmp+=Out_Name_tmp_4;
+        }
+        if(Out_Name_tmp_5 != ''){
+
+            Out_Name_tmp_5 ="font-family:"+Out_Name_tmp_5+' !important;';
+            Out_Name_tmp+=Out_Name_tmp_5;
+        }
+        if(Out_Name_tmp !=''){
+            $("#Out_Name_4").css('cssText',Out_Name_tmp);//提高权限
+        }
+        else{
+
+        }
+
+        var tmp='';
+        var tmp_1=$('#Left_Date_4').val();
+        var tmp_2=$('#Up_Date_4').val();
+        var tmp_3=$('#Spacing_Date_4').val();
+        var tmp_4=$('#Size_Date_4').val();
+        var tmp_5=$('#Font_Date_4').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Date_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Out_Bank_4').val();
+        var tmp_2=$('#Up_Out_Bank_4').val();
+        var tmp_3=$('#Spacing_Out_Bank_4').val();
+        var tmp_4=$('#Size_Out_Bank_4').val();
+        var tmp_5=$('#Font_Out_Bank_4').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Out_Bank_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Out_Accounted_4').val();
+        var tmp_2=$('#Up_Out_Accounted_4').val();
+        var tmp_3=$('#Spacing_Out_Accounted_4').val();
+        var tmp_4=$('#Size_Out_Accounted_4').val();
+        var tmp_5=$('#Font_Out_Accounted_4').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Out_Accounted_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_In_Name_4').val();
+        var tmp_2=$('#Up_In_Name_4').val();
+        var tmp_3=$('#Spacing_In_Name_4').val();
+        var tmp_4=$('#Size_In_Name_4').val();
+        var tmp_5=$('#Font_In_Name_4').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#In_Name_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+
+        var tmp_1=$('#Left_In_Accounted_4').val();
+        var tmp_2=$('#Up_In_Accounted_4').val();
+        var tmp_3=$('#Spacing_In_Accounted_4').val();
+        var tmp_4=$('#Size_In_Accounted_4').val();
+        var tmp_5=$('#Font_In_Accounted_4').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#In_Accounted_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_In_Bank_4').val();
+        var tmp_2=$('#Up_In_Bank_4').val();
+        var tmp_3=$('#Spacing_In_Bank_4').val();
+        var tmp_4=$('#Size_In_Bank_4').val();
+        var tmp_5=$('#Font_In_Bank_4').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#In_Bank_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Money_complex_4').val();
+        var tmp_2=$('#Up_Money_complex_4').val();
+        var tmp_3=$('#Spacing_Money_complex_4').val();
+        var tmp_4=$('#Size_Money_complex_4').val();
+        var tmp_5=$('#Font_Money_complex_4').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Money_complex_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Money_Arab_4').val();
+        var tmp_2=$('#Up_Money_Arab_4').val();
+        var tmp_3=$('#Spacing_Money_Arab_4').val();
+        var tmp_4=$('#Size_Money_Arab_4').val();
+        var tmp_5=$('#Font_Money_Arab_4').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Money_Arab_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+
+        var tmp_1=$('#Left_Type_Select').val();
+        var tmp_2=$('#Up_Type_Select').val();
+        var tmp_3=$('#Spacing_Type_Select').val();
+        var tmp_4=$('#Size_Type_Select').val();
+        var tmp_5=$('#Font_Type_Select').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Type_Select").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_In_Province_4').val();
+        var tmp_2=$('#Up_In_Province_4').val();
+        var tmp_3=$('#Spacing_In_Province_4').val();
+        var tmp_4=$('#Size_In_Province_4').val();
+        var tmp_5=$('#Font_In_Province_4').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#In_Province_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Out_Province_4').val();
+        var tmp_2=$('#Up_Out_Province_4').val();
+        var tmp_3=$('#Spacing_Out_Province_4').val();
+        var tmp_4=$('#Size_Out_Province_4').val();
+        var tmp_5=$('#Font_Out_Province_4').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Out_Province_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Use_4').val();
+        var tmp_2=$('#Up_Use_4').val();
+        var tmp_3=$('#Spacing_Use_4').val();
+        var tmp_4=$('#Size_Use_4').val();
+        var tmp_5=$('#Font_Use_4').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Use_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Add_Info_4').val();
+        var tmp_2=$('#Up_Add_Info_4').val();
+        var tmp_3=$('#Spacing_Add_Info_4').val();
+        var tmp_4=$('#Size_Add_Info_4').val();
+        var tmp_5=$('#Font_Add_Info_4').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Add_Info_4").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+
+
 
 
     });
