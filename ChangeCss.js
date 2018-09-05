@@ -137,11 +137,1074 @@ $(function() {
         style.innerHTML = "@media print {#Out_Name_3 {position: relative;left: 235pt;}}";
         window.document.head.appendChild(style); 
         */
+        var Out_Name_tmp='';
+        var Out_Name_tmp_1=$('#Left_Out_Name_3').val();
+        var Out_Name_tmp_2=$('#Up_Out_Name_3').val();
+        var Out_Name_tmp_3=$('#Spacing_Out_Name_3').val();
+        var Out_Name_tmp_4=$('#Size_Out_Name_3').val();
+        var Out_Name_tmp_5=$('#Font_Out_Name_3').val();
+
+        if(Out_Name_tmp_1 != ''){
+            Out_Name_tmp_1=parseFloat(Out_Name_tmp_1);
+            Out_Name_tmp_1 += 135;
+            Out_Name_tmp_1 ="left:"+Out_Name_tmp_1+'pt !important;';
+            Out_Name_tmp+=Out_Name_tmp_1;
+        }
+        if(Out_Name_tmp_2 !=''){
+            Out_Name_tmp_2=parseFloat(Out_Name_tmp_2);
+
+            Out_Name_tmp_2 ="transform:translate(0pt,"+Out_Name_tmp_2+'pt) !important;';
+            Out_Name_tmp+=Out_Name_tmp_2;
+        }
+        if(Out_Name_tmp_3 != ''){
+            Out_Name_tmp_3=parseFloat(Out_Name_tmp_3);
+
+            Out_Name_tmp_3 ="letter-spacing:"+Out_Name_tmp_3+'pt !important;';
+            Out_Name_tmp+=Out_Name_tmp_3;
+
+        }
+        if(Out_Name_tmp_4 !=''){
+            Out_Name_tmp_4=parseFloat(Out_Name_tmp_4);
+
+            Out_Name_tmp_4 ="font-size:"+Out_Name_tmp_4+'pt !important;';
+            Out_Name_tmp+=Out_Name_tmp_4;
+        }
+        if(Out_Name_tmp_5 != ''){
+
+            Out_Name_tmp_5 ="font-family:"+Out_Name_tmp_5+' !important;';
+            Out_Name_tmp+=Out_Name_tmp_5;
+        }
+        if(Out_Name_tmp !=''){
+            $("#Out_Name_3").css('cssText',Out_Name_tmp);//提高权限
+        }
+        else{
+
+        }
+
+        var tmp='';
+        var tmp_1=$('#Left_Date_3').val();
+        var tmp_2=$('#Up_Date_3').val();
+        var tmp_3=$('#Spacing_Date_3').val();
+        var tmp_4=$('#Size_Date_3').val();
+        var tmp_5=$('#Font_Date_3').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Date_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Out_Bank_3').val();
+        var tmp_2=$('#Up_Out_Bank_3').val();
+        var tmp_3=$('#Spacing_Out_Bank_3').val();
+        var tmp_4=$('#Size_Out_Bank_3').val();
+        var tmp_5=$('#Font_Out_Bank_3').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Out_Bank_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Out_Accounted_3').val();
+        var tmp_2=$('#Up_Out_Accounted_3').val();
+        var tmp_3=$('#Spacing_Out_Accounted_3').val();
+        var tmp_4=$('#Size_Out_Accounted_3').val();
+        var tmp_5=$('#Font_Out_Accounted_3').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Out_Accounted_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_In_Name_3').val();
+        var tmp_2=$('#Up_In_Name_3').val();
+        var tmp_3=$('#Spacing_In_Name_3').val();
+        var tmp_4=$('#Size_In_Name_3').val();
+        var tmp_5=$('#Font_In_Name_3').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#In_Name_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+
+
+
+
+        var tmp_1=$('#Left_In_Accounted_3').val();
+        var tmp_2=$('#Up_In_Accounted_3').val();
+        var tmp_3=$('#Spacing_In_Accounted_3').val();
+        var tmp_4=$('#Size_In_Accounted_3').val();
+        var tmp_5=$('#Font_In_Accounted_3').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#In_Accounted_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_In_Bank_3').val();
+        var tmp_2=$('#Up_In_Bank_3').val();
+        var tmp_3=$('#Spacing_In_Bank_3').val();
+        var tmp_4=$('#Size_In_Bank_3').val();
+        var tmp_5=$('#Font_In_Bank_3').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#In_Bank_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Money_complex_3').val();
+        var tmp_2=$('#Up_Money_complex_3').val();
+        var tmp_3=$('#Spacing_Money_complex_3').val();
+        var tmp_4=$('#Size_Money_complex_3').val();
+        var tmp_5=$('#Font_Money_complex_3').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Money_complex_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Money_Arab_3').val();
+        var tmp_2=$('#Up_Money_Arab_3').val();
+        var tmp_3=$('#Spacing_Money_Arab_3').val();
+        var tmp_4=$('#Size_Money_Arab_3').val();
+        var tmp_5=$('#Font_Money_Arab_3').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Money_Arab_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+
+
+
+
+
+        var tmp_1=$('#Left_Bill_Type_3').val();
+        var tmp_2=$('#Up_Bill_Type_3').val();
+        var tmp_3=$('#Spacing_Bill_Type_3').val();
+        var tmp_4=$('#Size_Bill_Type_3').val();
+        var tmp_5=$('#Font_Bill_Type_3').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Bill_Type_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Bill_Count_3').val();
+        var tmp_2=$('#Up_Bill_Count_3').val();
+        var tmp_3=$('#Spacing_Bill_Count_3').val();
+        var tmp_4=$('#Size_Bill_Count_3').val();
+        var tmp_5=$('#Font_Bill_Count_3').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Bill_Count_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Bill_Num_3').val();
+        var tmp_2=$('#Up_Bill_Num_3').val();
+        var tmp_3=$('#Spacing_Bill_Num_3').val();
+        var tmp_4=$('#Size_Bill_Num_3').val();
+        var tmp_5=$('#Font_Bill_Num_3').val();
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Bill_Num_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Use_3').val();
+        var tmp_2=$('#Up_Use_3').val();
+        var tmp_3=$('#Spacing_Use_3').val();
+        var tmp_4=$('#Size_Use_3').val();
+        var tmp_5=$('#Font_Use_3').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Use_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+        var tmp_1=$('#Left_Add_Info_3').val();
+        var tmp_2=$('#Up_Add_Info_3').val();
+        var tmp_3=$('#Spacing_Add_Info_3').val();
+        var tmp_4=$('#Size_Add_Info_3').val();
+        var tmp_5=$('#Font_Add_Info_3').val(); 
+        if(tmp_1 != ''){
+            tmp_1=parseFloat(tmp_1);
+            tmp_1 += 135;
+            tmp_1 ="left:"+tmp_1+'pt !important;';
+            tmp+=tmp_1;
+        }
+        if(tmp_2 !=''){
+            tmp_2=parseFloat(tmp_2);
+
+            tmp_2 ="transform:translate(0pt,"+tmp_2+'pt) !important;';
+            tmp+=tmp_2;
+        }
+        if(tmp_3 != ''){
+            tmp_3=parseFloat(tmp_3);
+
+            tmp_3 ="letter-spacing:"+tmp_3+'pt !important;';
+            tmp+=tmp_3;
+
+        }
+        if(tmp_4 !=''){
+            tmp_4=parseFloat(tmp_4);
+
+            tmp_4 ="font-size:"+tmp_4+'pt !important;';
+            tmp+=tmp_4;
+        }
+        if(tmp_5 != ''){
+
+            tmp_5 ="font-family:"+tmp_5+' !important;';
+            tmp+=tmp_5;
+        }
+        if(tmp !=''){
+            $("#Add_Info_3").css('cssText',tmp);//提高权限
+            tmp='';
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+
+        }
+        else{
+            tmp_1='';
+            tmp_2='';
+            tmp_3='';
+            tmp_4='';
+            tmp_5='';
+        }
+/*
+       var Date_tmp=$('#Left_Date_3').val();
+       if(Date_tmp !=''){
+            Date_tmp=parseFloat(Date_tmp);
+            Date_tmp += 135;
+           $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important;");//提高权限
+       }
+       else{
+
+       }       
         var Out_Name_tmp=$('#Left_Out_Name_3').val();
-        Out_Name_tmp=parseFloat(Out_Name_tmp);
-        Out_Name_tmp += 135;
-        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
+        if(Out_Name_tmp !=''){
+            Out_Name_tmp=parseFloat(Out_Name_tmp);
+            Out_Name_tmp += 135;
+            $("#Out_Name_3").css("cssText","left:"+Out_Name_tmp+"pt !important;");//提高权限
+            //$("#Out_Name_3").css("cssText",";font-size:25pt !important;font-family:Comic Sans MS;font-weight: 100!important;");//提高权限            
+
+        }
+        else{
+
+        }
+
+        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
+        if(Out_Name_tmp !=''){
+            Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+            Out_Accounted_tmp += 135;
+            $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        if(Out_Bank_tmp !=''){
+            Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+            Out_Bank_tmp += 135;
+            $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        if(In_Name_tmp !=''){
+            In_Name_tmp=parseFloat(In_Name_tmp);
+            In_Name_tmp += 122;
+            $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
         
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        if(In_Accounted_tmp !=''){
+            In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+            In_Accounted_tmp += 122;
+            $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        if(In_Bank_tmp !=''){
+            In_Bank_tmp=parseFloat(In_Bank_tmp);
+            In_Bank_tmp += 122;
+            $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        if(Money_complex_tmp !=''){
+            Money_complex_tmp=parseFloat(Money_complex_tmp);
+            Money_complex_tmp += 135;
+            $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        if(Money_Arab_tmp !=''){
+            Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+            Money_Arab_tmp += 122;
+            $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        if(Bill_Type_tmp !=''){
+            Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+            Bill_Type_tmp += 135;
+            $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        if(Bill_Count_tmp !=''){
+            Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+            Bill_Count_tmp += 1;
+            $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        if(Bill_Num_tmp !=''){
+            Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+            Bill_Num_tmp += 135;
+            $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        if(Add_Info_tmp !=''){
+            Add_Info_tmp=parseFloat(Add_Info_tmp);
+            Add_Info_tmp += 335;
+            $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        if(Use_tmp !=''){
+            Use_tmp=parseFloat(Use_tmp);
+            Use_tmp += 335;
+            $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+        var Up_Out_Name_tmp=$('#Up_Out_Name_3').val();
+        if(Up_Out_Name_tmp !=""){
+            Up_Out_Name_tmp=parseFloat(Up_Out_Name_tmp);
+            $("#Out_Name_3").css('cssText',"transform:translate(0pt,"+Up_Out_Name_tmp+"pt)!important");//提高权限
+            //$("#Out_Name_3").css("transform","translate(0pt,"+Up_Out_Name_tmp+"pt)");//提高权限
+            //alert($("#Out_Name_3").css("transform"));
+
+            //var style = document.createElement('style');
+            //style.innerHTML = "@media print {#Out_Name_3 {position: relative;transform:translate(0pt,"+Up_Out_Name_tmp+"pt)!important;}}";
+
+        }
+        else{
+
+        }
+
+
+        var Up_Date_tmp=$('#Up_Date_3').val();
+        if(Up_Date_tmp !=""){
+            Up_Date_tmp=parseFloat(Up_Date_tmp);
+            Up_Date_tmp += 135;
+            $("#Date_3").css('cssText',"left:"+Up_Date_tmp+"pt!important");//提高权限
+        }
+        else{
+
+        }
+
+        var Out_Accounted_tmp=$('#Up_Out_Accounted_3').val();
+        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+        Out_Accounted_tmp += 135;
+        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+        Out_Bank_tmp += 135;
+        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        In_Name_tmp=parseFloat(In_Name_tmp);
+        In_Name_tmp += 135;
+        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+        In_Accounted_tmp += 135;
+        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        In_Bank_tmp=parseFloat(In_Bank_tmp);
+        In_Bank_tmp += 135;
+        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        Money_complex_tmp=parseFloat(Money_complex_tmp);
+        Money_complex_tmp += 135;
+        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+        Money_Arab_tmp += 135;
+        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+        Bill_Type_tmp += 135;
+        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+        Bill_Count_tmp += 135;
+        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+        Bill_Num_tmp += 135;
+        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        Add_Info_tmp=parseFloat(Add_Info_tmp);
+        Add_Info_tmp += 135;
+        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        Use_tmp=parseFloat(Use_tmp);
+        Use_tmp += 135;
+        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+*/        
+  
+
+
+ /* 
+        var Spacing_Out_Name_tmp=$('#Spacing_Out_Name_3').val();
+        Spacing_Out_Name_tmp=parseFloat(Spacing_Out_Name_tmp);
+        $("#Out_Name_3").css('cssText',"letter-spacing:"+Spacing_Out_Name_tmp+"pt!important");//提高权限
+        
+
+      
+        var Spacing_Date_tmp=$('#Spacing_Date_3').val();
+        Spacing_Date_tmp=parseFloat(Spacing_Date_tmp);
+        Spacing_Date_tmp += 135;
+        $("#Date_3").css('cssText',"left:"+Spacing_Date_tmp+"pt!important");//提高权限
+
+        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
+        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
+        Out_Accounted_tmp += 135;
+        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
+
+        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
+        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
+        Out_Bank_tmp += 135;
+        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
+
+        var In_Name_tmp=$('#Left_In_Name_3').val();
+        In_Name_tmp=parseFloat(In_Name_tmp);
+        In_Name_tmp += 135;
+        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
+        
+        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
+        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
+        In_Accounted_tmp += 135;
+        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
+
+        var In_Bank_tmp=$('#Left_In_Bank_3').val();
+        In_Bank_tmp=parseFloat(In_Bank_tmp);
+        In_Bank_tmp += 135;
+        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
+
+        var Money_complex_tmp=$('#Left_Money_complex_3').val();
+        Money_complex_tmp=parseFloat(Money_complex_tmp);
+        Money_complex_tmp += 135;
+        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
+        
+        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
+        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
+        Money_Arab_tmp += 135;
+        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
+        
+        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
+        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
+        Bill_Type_tmp += 135;
+        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
+
+        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
+        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
+        Bill_Count_tmp += 135;
+        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
+
+        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
+        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
+        Bill_Num_tmp += 135;
+        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
+
+        var Add_Info_tmp=$('#Left_Add_Info_3').val();
+        Add_Info_tmp=parseFloat(Add_Info_tmp);
+        Add_Info_tmp += 135;
+        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
+        
+        var Use_tmp=$('#Left_Use_3').val();
+        Use_tmp=parseFloat(Use_tmp);
+        Use_tmp += 135;
+        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+*/
+/*
+        var Size_Out_Name_tmp=$('#Size_Out_Name_3').val();
+        //alert($("#Out_Name_3").css("font-size"));
+        Size_Out_Name_tmp=parseFloat(Size_Out_Name_tmp);
+        $("#Out_Name_3").css('cssText',"font-size:"+Size_Out_Name_tmp+"pt!important");//提高权限
+        //alert($("#Out_Name_3").css("font-size"));
+        
+
+
         var Date_tmp=$('#Left_Date_3').val();
         Date_tmp=parseFloat(Date_tmp);
         Date_tmp += 135;
@@ -159,17 +1222,17 @@ $(function() {
 
         var In_Name_tmp=$('#Left_In_Name_3').val();
         In_Name_tmp=parseFloat(In_Name_tmp);
-        In_Name_tmp += 122;
+        In_Name_tmp += 135;
         $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
         
         var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
         In_Accounted_tmp=parseFloat(In_Accounted_tmp);
-        In_Accounted_tmp += 122;
+        In_Accounted_tmp += 135;
         $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
 
         var In_Bank_tmp=$('#Left_In_Bank_3').val();
         In_Bank_tmp=parseFloat(In_Bank_tmp);
-        In_Bank_tmp += 122;
+        In_Bank_tmp += 135;
         $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
 
         var Money_complex_tmp=$('#Left_Money_complex_3').val();
@@ -179,7 +1242,7 @@ $(function() {
         
         var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
         Money_Arab_tmp=parseFloat(Money_Arab_tmp);
-        Money_Arab_tmp += 122;
+        Money_Arab_tmp += 135;
         $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
         
         var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
@@ -189,7 +1252,7 @@ $(function() {
 
         var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
         Bill_Count_tmp=parseFloat(Bill_Count_tmp);
-        Bill_Count_tmp += 1;
+        Bill_Count_tmp += 135;
         $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
 
         var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
@@ -199,32 +1262,19 @@ $(function() {
 
         var Add_Info_tmp=$('#Left_Add_Info_3').val();
         Add_Info_tmp=parseFloat(Add_Info_tmp);
-        Add_Info_tmp += 335;
+        Add_Info_tmp += 135;
         $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
         
         var Use_tmp=$('#Left_Use_3').val();
         Use_tmp=parseFloat(Use_tmp);
-        Use_tmp += 335;
+        Use_tmp += 135;
         $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
+*/
+ /*
+        var Font_Out_Name_tmp=$('#Font_Out_Name_3').val();
 
+        $("#Out_Name_3").css('cssText',"font-family:"+Font_Out_Name_tmp+"!important");//提高权限
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        var Out_Name_tmp=$('#Left_Out_Name_3').val();
-        Out_Name_tmp=parseFloat(Out_Name_tmp);
-        Out_Name_tmp += 135;
-        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
         
         var Date_tmp=$('#Left_Date_3').val();
         Date_tmp=parseFloat(Date_tmp);
@@ -290,220 +1340,7 @@ $(function() {
         Use_tmp=parseFloat(Use_tmp);
         Use_tmp += 135;
         $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
-        
-        
-        var Out_Name_tmp=$('#Left_Out_Name_3').val();
-        Out_Name_tmp=parseFloat(Out_Name_tmp);
-        Out_Name_tmp += 135;
-        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
-        
-        var Date_tmp=$('#Left_Date_3').val();
-        Date_tmp=parseFloat(Date_tmp);
-        Date_tmp += 135;
-        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
-
-        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
-        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
-        Out_Accounted_tmp += 135;
-        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
-
-        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
-        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
-        Out_Bank_tmp += 135;
-        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
-
-        var In_Name_tmp=$('#Left_In_Name_3').val();
-        In_Name_tmp=parseFloat(In_Name_tmp);
-        In_Name_tmp += 135;
-        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
-        
-        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
-        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
-        In_Accounted_tmp += 135;
-        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
-
-        var In_Bank_tmp=$('#Left_In_Bank_3').val();
-        In_Bank_tmp=parseFloat(In_Bank_tmp);
-        In_Bank_tmp += 135;
-        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
-
-        var Money_complex_tmp=$('#Left_Money_complex_3').val();
-        Money_complex_tmp=parseFloat(Money_complex_tmp);
-        Money_complex_tmp += 135;
-        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
-        
-        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
-        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
-        Money_Arab_tmp += 135;
-        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
-        
-        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
-        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
-        Bill_Type_tmp += 135;
-        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
-
-        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
-        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
-        Bill_Count_tmp += 135;
-        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
-
-        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
-        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
-        Bill_Num_tmp += 135;
-        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
-
-        var Add_Info_tmp=$('#Left_Add_Info_3').val();
-        Add_Info_tmp=parseFloat(Add_Info_tmp);
-        Add_Info_tmp += 135;
-        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
-        
-        var Use_tmp=$('#Left_Use_3').val();
-        Use_tmp=parseFloat(Use_tmp);
-        Use_tmp += 135;
-        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
-
-
-        var Out_Name_tmp=$('#Left_Out_Name_3').val();
-        Out_Name_tmp=parseFloat(Out_Name_tmp);
-        Out_Name_tmp += 135;
-        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
-        
-        var Date_tmp=$('#Left_Date_3').val();
-        Date_tmp=parseFloat(Date_tmp);
-        Date_tmp += 135;
-        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
-
-        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
-        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
-        Out_Accounted_tmp += 135;
-        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
-
-        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
-        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
-        Out_Bank_tmp += 135;
-        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
-
-        var In_Name_tmp=$('#Left_In_Name_3').val();
-        In_Name_tmp=parseFloat(In_Name_tmp);
-        In_Name_tmp += 135;
-        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
-        
-        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
-        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
-        In_Accounted_tmp += 135;
-        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
-
-        var In_Bank_tmp=$('#Left_In_Bank_3').val();
-        In_Bank_tmp=parseFloat(In_Bank_tmp);
-        In_Bank_tmp += 135;
-        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
-
-        var Money_complex_tmp=$('#Left_Money_complex_3').val();
-        Money_complex_tmp=parseFloat(Money_complex_tmp);
-        Money_complex_tmp += 135;
-        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
-        
-        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
-        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
-        Money_Arab_tmp += 135;
-        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
-        
-        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
-        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
-        Bill_Type_tmp += 135;
-        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
-
-        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
-        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
-        Bill_Count_tmp += 135;
-        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
-
-        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
-        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
-        Bill_Num_tmp += 135;
-        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
-
-        var Add_Info_tmp=$('#Left_Add_Info_3').val();
-        Add_Info_tmp=parseFloat(Add_Info_tmp);
-        Add_Info_tmp += 135;
-        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
-        
-        var Use_tmp=$('#Left_Use_3').val();
-        Use_tmp=parseFloat(Use_tmp);
-        Use_tmp += 135;
-        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
-
-
-        var Out_Name_tmp=$('#Left_Out_Name_3').val();
-        Out_Name_tmp=parseFloat(Out_Name_tmp);
-        Out_Name_tmp += 135;
-        $("#Out_Name_3").css('cssText',"left:"+Out_Name_tmp+"pt!important");//提高权限
-        
-        var Date_tmp=$('#Left_Date_3').val();
-        Date_tmp=parseFloat(Date_tmp);
-        Date_tmp += 135;
-        $("#Date_3").css('cssText',"left:"+Date_tmp+"pt!important");//提高权限
-
-        var Out_Accounted_tmp=$('#Left_Out_Accounted_3').val();
-        Out_Accounted_tmp=parseFloat(Out_Accounted_tmp);
-        Out_Accounted_tmp += 135;
-        $("#Out_Accounted_3").css('cssText',"left:"+Out_Accounted_tmp+"pt!important");//提高权限
-
-        var Out_Bank_tmp=$('#Left_Out_Bank_3').val();
-        Out_Bank_tmp=parseFloat(Out_Bank_tmp);
-        Out_Bank_tmp += 135;
-        $("#Out_Bank_3").css('cssText',"left:"+Out_Bank_tmp+"pt!important");//提高权限
-
-        var In_Name_tmp=$('#Left_In_Name_3').val();
-        In_Name_tmp=parseFloat(In_Name_tmp);
-        In_Name_tmp += 135;
-        $("#In_Name_3").css('cssText',"left:"+In_Name_tmp+"pt!important");//提高权限
-        
-        var In_Accounted_tmp=$('#Left_In_Accounted_3').val();
-        In_Accounted_tmp=parseFloat(In_Accounted_tmp);
-        In_Accounted_tmp += 135;
-        $("#In_Accounted_3").css('cssText',"left:"+In_Accounted_tmp+"pt!important");//提高权限
-
-        var In_Bank_tmp=$('#Left_In_Bank_3').val();
-        In_Bank_tmp=parseFloat(In_Bank_tmp);
-        In_Bank_tmp += 135;
-        $("#In_Bank_3").css('cssText',"left:"+In_Bank_tmp+"pt!important");//提高权限
-
-        var Money_complex_tmp=$('#Left_Money_complex_3').val();
-        Money_complex_tmp=parseFloat(Money_complex_tmp);
-        Money_complex_tmp += 135;
-        $("#Money_complex_3").css('cssText',"left:"+Money_complex_tmp+"pt!important");//提高权限
-        
-        var Money_Arab_tmp=$('#Left_Money_Arab_3').val();
-        Money_Arab_tmp=parseFloat(Money_Arab_tmp);
-        Money_Arab_tmp += 135;
-        $("#Money_Arab_3").css('cssText',"left:"+Money_Arab_tmp+"pt!important");//提高权限
-        
-        var Bill_Type_tmp=$('#Left_Bill_Type_3').val();
-        Bill_Type_tmp=parseFloat(Bill_Type_tmp);
-        Bill_Type_tmp += 135;
-        $("#Bill_Type_3").css('cssText',"left:"+Bill_Type_tmp+"pt!important");//提高权限
-
-        var Bill_Count_tmp=$('#Left_Bill_Count_3').val();
-        Bill_Count_tmp=parseFloat(Bill_Count_tmp);
-        Bill_Count_tmp += 135;
-        $("#Bill_Count_3").css('cssText',"left:"+Bill_Count_tmp+"pt!important");//提高权限
-
-        var Bill_Num_tmp=$('#Left_Bill_Num_3').val();
-        Bill_Num_tmp=parseFloat(Bill_Num_tmp);
-        Bill_Num_tmp += 135;
-        $("#Bill_Num_3").css('cssText',"left:"+Bill_Num_tmp+"pt!important");//提高权限
-
-        var Add_Info_tmp=$('#Left_Add_Info_3').val();
-        Add_Info_tmp=parseFloat(Add_Info_tmp);
-        Add_Info_tmp += 135;
-        $("#Add_Info_3").css('cssText',"left:"+Add_Info_tmp+"pt!important");//提高权限
-        
-        var Use_tmp=$('#Left_Use_3').val();
-        Use_tmp=parseFloat(Use_tmp);
-        Use_tmp += 135;
-        $("#Use_3").css('cssText',"left:"+Use_tmp+"pt!important");//提高权限
-
+*/
 
     });
 
