@@ -88,8 +88,7 @@
     left: 190pt;
     vertical-align:baseline;
     transform: translate(0pt,0pt);
-    font-family:"SimHei";
-    font-size:16pt;
+
 }
 #In_Name_3 {
     position: relative;
@@ -176,7 +175,12 @@
 
 
 
-
+#Type_Select {
+  position: relative;
+  left: 105pt;
+  vertical-align:baseline;
+  transform: translate(0pt,24pt);
+}
 #Teledate {
   position: relative;
   left: 190pt;

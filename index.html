@@ -432,7 +432,7 @@
       <div id="hidden_event5">
         <div id="print">
           <table id="bg2" style="width:1190px; height:530px; padding:0pt; margin-top: 0pt;">  
-            <tr id="Row_8" style="padding:0pt; margin-top: 0pt; height:50pt;">                            
+            <tr id="Row_8" style="padding:0pt; margin-top: 0pt; height:73pt;">                            
               <td><div id="Type_Select"></div></td><td><div id="Date_4"></div></td>                        
             </tr>                      
             <tr id="Row_9" style="padding:0pt; margin-top: 0pt; height:23pt;">                            
@@ -454,7 +454,7 @@
             <tr id="Row_14" style="padding:0pt; margin-top: 0pt; height:20pt;">                            
               <td><div id="Use_4"></div></td>                       
             </tr>
-            <tr id="Final_2" style="padding:0pt; margin-top: 0pt; height:229pt;">                            
+            <tr id="Final_2" style="padding:0pt; margin-top: 0pt; height:206pt;">                            
               <td><div id="Add_Info_4"></div></td>                      
             </tr>                               
         </table> 
@@ -477,21 +477,24 @@
                         <td width="16%" style='vertical-align: middle;text-align: center;'>字体</td>                        
                       </tr>
                       <tr>
-                        <td style='vertical-align: middle;text-align: right;'>普通标记</td>
+                        <td style='vertical-align: middle;text-align: right;'>标记</td>
                         <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Type_Select" value="" size="10"/></td>
                         <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Type_Select" value="" size="10"/></td>
                         <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Type_Select" value="" size="10"/></td>
                         <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Type_Select" value="" size="10"/></td>
-                        <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Type_Select" value="" size="10"/></td>
-                      </tr>                        
-                      <tr>
-                        <td style='vertical-align: middle;text-align: right;'>加急标记</td>
-                        <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Type_Select" value="" size="10"/></td>
-                        <td style='vertical-align: middle;text-align: center;'><input type="text" id="Up_Type_Select" value="" size="10"/></td>
-                        <td style='vertical-align: middle;text-align: center;'><input type="text" id="Spacing_Type_Select" value="" size="10"/></td>
-                        <td style='vertical-align: middle;text-align: center;'><input type="text" id="Size_Type_Select" value="" size="10"/></td>
-                        <td style='vertical-align: middle;text-align: center;'><input type="text" id="Font_Type_Select" value="" size="10"/></td>
-                      </tr>   
+                        <td style='vertical-align: middle;text-align: center;'>
+                          <div class="form-group">
+                            <select id="Font_Type_Select" class="form-control selectpicker">
+                              <option value="黑体">黑体</option>
+                              <option value="仿宋">仿宋</option>
+                              <option value="宋体">宋体</option>
+                              <option value="楷体">楷体</option>
+                              <option value="微软雅黑">微软雅黑</option>
+                              <option value="新宋体">新宋体</option>		
+                            </select>
+                          </div>
+                        </td>
+                      </tr>                           
                       <tr>
                         <td style='vertical-align: middle;text-align: right;'>委托日期</td>
                         <td style='vertical-align: middle;text-align: center;'><input type="text" id="Left_Date_4" value="" size="10"/></td>
@@ -742,7 +745,7 @@
                     </tbody>
                     <tfoot>
                       <tr>
-                        <td>
+                        <td colspan="10">
                           <button type="submit" value="提交" class="btn btn-primary btn-sm save" id="Confirm">
                               提 交
                             </button>	
@@ -753,8 +756,8 @@
                         </td>
                       </tr>
                       <tr>
-                          <td height='50' colspan="20" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet2" value="电汇单打印设置" /></td>                
-                      </tr>             
+                          <td height='50' colspan="10" style='vertical-align: middle;text-align: right;'><input type="submit" class="btn btn-primary" id="SubmitSet2" value="电汇单打印设置" /></td>                
+                      </tr>                      
                     </tfoot>
             
                     </table>
@@ -1252,10 +1255,10 @@
                       <td colspan="10" style='vertical-align: middle;text-align: left;'>
                         <div class="checkbox" id="box">
                           <label class="checkbox-inline">
-                            <input type="checkbox" value="普通" checked="checked">普通 
+                            <input type="checkbox" value="普通" id="box[]" checked="checked"/>普通 
                           </label>
                           <label class="checkbox-inline">
-                            <input type="checkbox" value="加急" >加急
+                            <input type="checkbox" value="加急" id="box[]"/>加急
                           </label>
                         </div>
                       </td>
@@ -1658,15 +1661,15 @@ $(function() {
 
     });    
     $('#SubmitSet2').click(function(){
-		  if($("#hidden_event7").css("display")=="none"){
+		  if($("#hidden_event5").css("display")=="none"){
 		//if($('#hidden_event1').is(':hidden')){
-		  $('#hidden_event7').show();
+		  $('#hidden_event5').show();
       $('#hidden_event1').hide();
       $('#hidden_event2').hide();
       $('#hidden_event3').hide();
       $('#hidden_event4').hide();
       $('#hidden_event6').hide();
-      $('#hidden_event5').hide();
+      $('#hidden_event7').hide();
       }
 
     });
@@ -1674,7 +1677,12 @@ $(function() {
     //进账单取消打印设置
     $('#Bill_Cancel').click(function(){
       $('#hidden_event1').show();
+      $('#hidden_event2').hide();
+      $('#hidden_event3').hide();
+      $('#hidden_event4').hide();
+      $('#hidden_event5').hide();
       $('#hidden_event6').hide();
+      $('#hidden_event7').hide();
     });
     //进账单打印参数设置
  /*
@@ -1700,6 +1708,11 @@ $(function() {
     //电汇单取消打印参数设置
     $('#Cancel').click(function(){
       $('#hidden_event3').show();
+      $('#hidden_event1').hide();
+      $('#hidden_event2').hide();
+      $('#hidden_event4').hide();
+      $('#hidden_event5').hide();
+      $('#hidden_event6').hide();
       $('#hidden_event7').hide();
 
     });

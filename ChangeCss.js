@@ -64,9 +64,29 @@ $(function() {
     //电汇单数据打印
     $('#click_event5').click(function(){
         var box=$("#box").val();
-        var Date_4=$("#Teledate").val();
+        var value_tmp=$("input[type='checkbox']").is(":checked");
+        //var value_tmp=$('#box').find('input[type=checkbox]').val();
+        if(value_tmp==true){
+            alert($('#box').find('input[type=checkbox]').val());
+        }
+        alert(value_tmp);
+        if(value_tmp=="普通"){
+            $("#Type_Select").text("✔");
+        }
+        else{//加急
+            
+            $("#Type_Select").text("✔");
+            var Type_Select_2 ="left:172pt !important;";
+            $("#Type_Select").css('cssText',Type_Select_2);//提高权限
+        }
+       
+        var Date_4=$("#Teledate").find("input").val();  //jQuery获取日期值
+        
+        var Date_tmp=' ';
+        Date_4=Date_4.replace('-', '&nbsp;');
+
         //数据填充在table表中
-        $("#Date_4").text(Date_4);
+        $("#Date_4").html(Date_4);
         var Out_Name_4=$("#Out_Name_2").val();
         var In_Name_4=$("#In_Name_2").val();
         
@@ -117,13 +137,13 @@ $(function() {
         Money_Arab_4 = "￥"+ Money_Arab_4;
         $("#Money_Arab_4").text(Money_Arab_4);
         
-        $("#bg2").jqprint({
-        });
+        //$("#bg2").jqprint({});
 
     });
     //电汇单打印设置
     $('#SubmitSet2').click(function(){
-        $('#MyModal').modal({backdrop:'static'}); //只能点击模态窗的提交和取消按钮取消模态窗显示
+        //$('#MyModal').modal({backdrop:'static'}); //只能点击模态窗的提交和取消按钮取消模态窗显示
+        $("#bg2").jqprint({});
     });
 
 
@@ -1811,14 +1831,26 @@ $(function() {
             tmp_5='';
         }
 
+        //var value_tmp=$('#box').val();
+        var value_tmp=$("input[type='checkbox']").is(":checked");
         var tmp_1=$('#Left_Type_Select').val();
         var tmp_2=$('#Up_Type_Select').val();
         var tmp_3=$('#Spacing_Type_Select').val();
         var tmp_4=$('#Size_Type_Select').val();
         var tmp_5=$('#Font_Type_Select').val();
+        if(value_tmp == "普通"){
+            alert(value_tmp);
+            var tmp_var= 0;
+            tmp_var=parseFloat(tmp_var);
+        }
+        else{//加急
+            alert(value_tmp);
+            var tmp_var= 50;
+            tmp_var=parseFloat(tmp_var);
+        }
         if(tmp_1 != ''){
             tmp_1=parseFloat(tmp_1);
-            tmp_1 += 135;
+            tmp_1 += tmp_var;
             tmp_1 ="left:"+tmp_1+'pt !important;';
             tmp+=tmp_1;
         }
@@ -1848,6 +1880,7 @@ $(function() {
         }
         if(tmp !=''){
             $("#Type_Select").css('cssText',tmp);//提高权限
+            alert( $("#Type_Select").css());
             tmp='';
             tmp_1='';
             tmp_2='';
