@@ -20,9 +20,9 @@
     }   
     #Date_3 {
         position: relative;
-        left: 135pt;
+        left: 255pt;
         vertical-align:baseline;
-        transform: translate(0pt,0pt);
+        transform: translate(0pt,23pt);
         font-family:"SimHei";
         font-size:16pt;
     }
@@ -38,7 +38,7 @@
     }   
     #In_Name_3 {
         position: relative;
-        left: 122pt;
+        left: -282pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
@@ -54,7 +54,7 @@
     }
     #In_Accounted_3 {
         position: relative;
-        left: 122pt;
+        left: -282pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
@@ -70,7 +70,7 @@
     }
     #In_Bank_3 {
         position: relative;
-        left: 122pt;
+        left: -282pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
@@ -88,9 +88,9 @@
     #Money_Arab_3 {
         font-size:20pt; 
         position: relative;
-        left: 122pt;
+        left: -242pt;
         vertical-align:baseline;
-        transform: translate(0pt,20pt);
+        transform: translate(0pt,10pt);
         font-family:"SimHei";
         font-size:16pt;
     }
@@ -105,7 +105,7 @@
     }
     #Bill_Count_3 {
         position: relative;
-        left: 1pt;
+        left: -405pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
@@ -145,15 +145,25 @@
         /*background-size:1190px 570px;*/
         padding:0pt; 
         margin-top: 0pt;
-    }   
-    #Teledate {
+    } 
+  
+    #Type_Select {
         position: relative;
-        left: 135pt;
+        left: 72pt;
         vertical-align:baseline;
-        transform: translate(0pt,0pt);
+        transform: translate(0pt,17pt);
+      }
+     
+    #Date_4 {
+        position: relative;
+        left: -145pt;
+        vertical-align:baseline;
+        transform: translate(0pt,20pt);
         font-family:"SimHei";
         font-size:16pt;
+        letter-spacing:0pt;
     }
+    
     #Out_Name_4 {
         position: relative;
         left: 135pt;
@@ -165,7 +175,7 @@
     }
     #In_Name_4 {
         position: relative;
-        left: 192pt;
+        left: -82pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
@@ -181,7 +191,7 @@
     }
     #In_Accounted_4 {
         position: relative;
-        left: 192pt;
+        left: -82pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
@@ -197,7 +207,7 @@
     }
     #In_Bank_4 {
         position: relative;
-        left: 182pt;
+        left: -82pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
@@ -215,9 +225,9 @@
     #Money_Arab_4 {
         font-size:20pt; 
         position: relative;
-        left: 235pt;
+        left: -18pt;
         vertical-align:baseline;
-        transform: translate(0pt,15pt);
+        transform: translate(0pt,7pt);
         font-family:"SimHei";
         font-size:16pt;
     }
@@ -225,7 +235,7 @@
         position: relative;
         left: 335pt;
         vertical-align:baseline;
-        transform: translate(0pt,40pt);
+        transform: translate(0pt,-70pt);
         word-break : break-all;
         font-size:12pt;
     }
@@ -249,7 +259,7 @@
     }
     #In_Province_4 {
         position: relative;
-        left: 192pt;
+        left: -72pt;
         vertical-align:baseline;
         transform: translate(0pt,0pt);
         font-family:"SimHei";
